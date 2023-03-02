@@ -1,0 +1,2 @@
+# yanoLocalEnv
+yanosea local env.
