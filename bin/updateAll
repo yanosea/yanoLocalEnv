@@ -1,0 +1,67 @@
+#!/bin/bash 
+# Update All Packages
+echo -e "\e[36;1mUpdate All Packages!
+\e[m"
+
+# Update Pacman packages
+## Sync repository and update packages
+echo -e "\e[33;1mUpdate pacman Packages!
+\e[m"
+sudo pacman -Syyu
+
+## Delete cache
+sudo pacman -Scc
+
+# Update homeBrew packages
+## Update packages
+echo -e "\e[33;1m
+Update brew Packages!
+\e[m"
+brew update
+
+## Upgrade packages
+brew upgrade
+
+## Clean up
+brew cleanup
+
+## Check health
+brew doctor
+
+# Update go packages
+echo -e "\e[33;1m
+Update go Packages!
+\e[m"
+gup update
+
+# Update GitHub Packages
+echo -e "\e[33;1m
+Update GitHub Packages!
+\e[m"
+ghq list | ghq get --update
+
+# Update cargo packages
+echo -e "\e[33;1m
+Update cargo Packages!
+\e[m"
+cargo install-update -a
+
+# Update npm Packages
+echo -e "\e[33;1m
+Update npm Packages!
+\e[m"
+ncu -g
+
+# Update pkglist
+echo -e "\e[33;1m
+Update pkglist!
+\e[m"
+pacman -Qq > $HOME/work/pkglist/pacmanpkglist.txt
+brew leaves > $HOME/work/pkglist/brewpkglist.txt
+ls $HOME/go/bin > $HOME/work/pkglist/gopkglist.txt
+ghq list > $HOME/work/pkglist/ghpkglist.txt
+cargo install --list | sed -e 's/ .*//g' | tr -s '\n' > $HOME/work/pkglist/cargopkglist.txt
+npm list -g --depth=0 | sed -e '1d;$d;s/├\|└\|─* \|@.*//g;' > $HOME/work/pkglist/npmpkglist.txt
+
+# DONE!
+echo -e "\e[32;1mDone!\e[m"

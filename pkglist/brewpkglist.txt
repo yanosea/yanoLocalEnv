@@ -1,0 +1,15 @@
+arrow2nd/tap/gomi-rename
+arrow2nd/tap/nekome
+brotli
+dbus
+ghq
+krb5
+libevent
+libidn2
+libnghttp2
+libssh2
+libxcb
+openldap
+pkg-config
+portaudio
+rtmpdump

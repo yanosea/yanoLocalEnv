@@ -1,0 +1,8 @@
+bash-language-server
+corepack
+git-split-diffs
+node-gyp
+nopt
+npm-check-updates
+npm
+semver

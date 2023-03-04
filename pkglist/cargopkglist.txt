@@ -1,0 +1,3 @@
+a-gpt
+cargo-update
+spotify-tui

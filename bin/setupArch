@@ -1,0 +1,92 @@
+#!/bin/bash
+# INSTALL Git
+sudo pacman -S Git
+
+# MAKE GHQ yanosea DIRECTORY
+mkdir -p $HOME/ghq/github.com/yanosea
+
+# CLONE yanoseaLocalEnv
+git clone https://github.com/yanosea/yanoLocalEnv.git $HOME/ghq/github.com/yanosea
+
+# LINK yanoLocalEnv
+ln -s $HOME/ghq/github.com/yanosea/yanoLocalEnv $HOME/work/
+
+# CLONE yanoDotFiles
+git clone https://github.com/yanosea/yanoDotFiles.git $HOME/ghq/github.com/yanosea
+
+# LINK yanoDotFile
+ln -s $HOME/ghq/github.com/yanosea/yanoDotFiles/.config $HOME/.config/
+ln -s $HOME/ghq/github.com/yanosea/yanoDotFiles/.vim $HOME/.vim/
+
+# MAKE XDG DIRECTORY
+sudo cp -p $HOME/work/configFiles/xdgenv.sh /etc/profile.d/xdgenv.sh
+mkdir -p $HOME/.cache
+mkdir -p $HOME/.local/share
+mkdir -p $HOME/.local/state
+
+# SETTING
+## Optimize Pacman mirror server
+sudo cp -p $HOME/work/configFiles/mirrorlist /etc/pacman.d/mirrorlist
+
+## Setup pacman configFiles
+sudo cp -p $HOME/work/configFiles/pacman.conf /etc/pacman.conf
+
+## Setup pacman hook
+sudo cp -p $HOME/work/configFiles/pacmanpkglist.hook /etc/pacman.d/hooks/
+
+## Sync Repository and Update Packages
+sudo pacman -Syyu
+
+## Setup sysctl configFiles
+sudo cp -p $HOME/work/configFiles/sysctl.conf /etc/sysctl.conf
+sudo cp -p $HOME/work/configFiles/timesyncd.conf /etc/systemd/timesyncd.conf
+sudo cp -p $HOME/work/configFiles/systemd-timesyncd.service /usr/lib/systemd/system/systemd-timesyncd.service
+
+# INSTALL PACKAGES
+## Install pacman packages from list
+sudo pacman -S --needed - < $HOME/work/pkglist/pacmanpkglist.txt
+
+## Install Linuxbrew
+sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
+
+## Install Linuxbrew packages
+brew tap arrow2nd/tap
+xargs brew install < $HOME/work/pkglist/brewpkglist.txt
+
+## Install go packages
+go install golang.org/x/tools/gopls@latest
+go install github.com/go-delve/delve/cmd/dlv@latest
+go install github.com/nao1215/gup@latest
+go install github.com/sheepla/pingu@latest
+go install github.com/sheepla/longgopher@latest
+go install github.com/sheepla/og@latest
+go install github.com/spf13/cobra-cli@latest
+
+## Install GitHub packages
+xargs -I arg ghq get arg < $HOME/work/pkglist/ghpkglist.txt
+cd $HOME/ghq/github.com/sheepla/pacsummary
+sudo make install
+cd
+
+## Install cargo
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+### Install cargo packages
+xargs -I arg cargo install arg < work/pkglist/cargopkglist.txt
+
+## Install npm packages
+cat work/pkglist/npmpkglist.txt | tr '\n' ' ' | sudo xargs npm install -g
+
+## Install Fisherman
+curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
+
+### Install Fish theme
+fisher install oh-my-fish/theme-bobthefish
+fisher install jethrokuan/z
+
+# CHANGE LOGIN SHELL TO ZSH
+sudo cp -p $HOME/work/configFiles/zshenv /etc/zsh/zshenv
+chsh -s /usr/sbin/zsh
+
+# DONE!
+echo Done!

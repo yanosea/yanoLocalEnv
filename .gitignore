@@ -1,0 +1,7 @@
+# IGNORE FOLDER
+credentials
+
+# IGNORE FILE
+bin/spotify-tui
+bin/spzenhan.exe
+*.log
