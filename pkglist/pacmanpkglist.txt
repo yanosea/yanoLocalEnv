@@ -183,6 +183,14 @@ popt
 procps-ng
 psmisc
 python
+python-attrs
+python-cffi
+python-cryptography
+python-packaging
+python-pip
+python-ply
+python-pycparser
+python-wheel
 ranger
 readline
 ripgrep
