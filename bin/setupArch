@@ -72,10 +72,13 @@ cd
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 ### Install cargo packages
-xargs -I arg cargo install arg < work/pkglist/cargopkglist.txt
+xargs -I arg cargo install arg < $HOME/work/pkglist/cargopkglist.txt
 
 ## Install npm packages
-cat work/pkglist/npmpkglist.txt | tr '\n' ' ' | sudo xargs npm install -g
+cat $HOME/work/pkglist/npmpkglist.txt | tr '\n' ' ' | sudo xargs npm install -g
+
+## Install pip packages
+pip install -r $HOME/work/pkglist/pipkglist.txt
 
 ## Install Fisherman
 curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher

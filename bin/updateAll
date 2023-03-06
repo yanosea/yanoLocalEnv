@@ -62,6 +62,7 @@ ls $HOME/go/bin > $HOME/work/pkglist/gopkglist.txt
 ghq list > $HOME/work/pkglist/ghpkglist.txt
 cargo install --list | sed -e 's/ .*//g' | tr -s '\n' > $HOME/work/pkglist/cargopkglist.txt
 npm list -g --depth=0 | sed -e '1d;$d;s/├\|└\|─* \|@.*//g;' > $HOME/work/pkglist/npmpkglist.txt
+pip freeze > $HOME/work/pkglist/pipkglist.txt
 
 # DONE!
 echo -e "\e[32;1mDone!\e[m"
