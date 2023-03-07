@@ -52,6 +52,7 @@ sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/mas
 
 ## Install Linuxbrew packages
 brew tap arrow2nd/tap
+brew tap goreleaser/tap
 xargs brew install < $HOME/work/pkglist/brewpkglist.txt
 
 ## Install go packages
