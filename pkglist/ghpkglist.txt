@@ -3,4 +3,3 @@ github.com/astj/ghq-migrator
 github.com/sheepla/pacsummary
 github.com/yanosea/yanoDotFiles
 github.com/yanosea/yanoLocalEnv
-github.com/yanosea/yanoseaArchHome
