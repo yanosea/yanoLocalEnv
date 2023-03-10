@@ -69,6 +69,7 @@ go install github.com/spf13/cobra-cli@latest
 xargs -I arg ghq get arg < $HOME/work/pkglist/ghpkglist.txt
 cd $HOME/ghq/github.com/sheepla/pacsummary
 sudo make install
+which pacsummary | sudo xargs mv -t $HOME/work/bin
 cd
 
 ## Install cargo
