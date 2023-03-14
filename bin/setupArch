@@ -90,6 +90,9 @@ curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
 ### Install Fish theme
 fisher install oh-my-fish/theme-bobthefish
 fisher install jethrokuan/z
+fisher install pure-fish/pure
+fisher install matchai/spacefishi
+fisher install oh-my-fish/theme-zish
 
 # CHANGE LOGIN SHELL TO ZSH
 sudo cp -p $HOME/work/configFiles/zshenv /etc/zsh/zshenv
