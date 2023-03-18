@@ -78,7 +78,16 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ### Install cargo packages
 xargs -I arg cargo install arg < $HOME/work/pkglist/cargopkglist.txt
 
-## Install npm packages
+## Install Volta
+curl https://get.volta.sh | bash
+
+### Install node LTS
+volta install node
+
+### Install npm LTS
+volta install npm
+
+### Install npm packages
 cat $HOME/work/pkglist/npmpkglist.txt | tr '\n' ' ' | sudo xargs npm install -g
 
 ## Install pip packages

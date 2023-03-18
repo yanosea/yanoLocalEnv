@@ -17,7 +17,6 @@ binutils
 bison
 brotli
 bzip2
-c-ares
 ca-certificates
 ca-certificates-mozilla
 ca-certificates-utils
@@ -155,10 +154,6 @@ ncurses
 neofetch
 neovim
 nettle
-node-gyp
-nodejs
-nodejs-nopt
-npm
 npth
 oniguruma
 openssh
@@ -196,7 +191,6 @@ ranger
 readline
 ripgrep
 sed
-semver
 shadow
 skim
 sqlite
