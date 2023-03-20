@@ -46,6 +46,9 @@ Update cargo Packages!
 \e[m"
 cargo install-update -a
 
+# Update Volta
+curl https://get.volta.sh | bash -s -- --skip-setup
+
 # Update npm Packages
 echo -e "\e[33;1m
 Update npm Packages!
