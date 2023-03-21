@@ -15,10 +15,10 @@ ln -s $HOME/ghq/github.com/yanosea/yanoLocalEnv $HOME/work/
 git clone https://github.com/yanosea/yanoDotFiles.git $HOME/ghq/github.com/yanosea
 
 # LINK yanoDotFile
-ln -s $HOME/qhq/github.com/yanosea/yanoDotFiles $HOME/dotfiles
+ln -s $HOME/ghq/github.com/yanosea/yanoDotFiles $HOME/dotfiles/
 ln -s $HOME/ghq/github.com/yanosea/yanoDotFiles/.config $HOME/.config/
 ln -s $HOME/ghq/github.com/yanosea/yanoDotFiles/.vim $HOME/.vim/
-ln -s $HOME/qhq/github.com/yanosea/yanoDotFiles/.wanna/ $HOME/.wanna/
+ln -s $HOME/ghq/github.com/yanosea/yanoDotFiles/.wanna $HOME/.wanna/
 
 # MAKE XDG DIRECTORY
 sudo cp -p $HOME/work/configFiles/xdgenv.sh /etc/profile.d/xdgenv.sh
@@ -34,7 +34,7 @@ sudo cp -p $HOME/work/configFiles/mirrorlist /etc/pacman.d/mirrorlist
 sudo cp -p $HOME/work/configFiles/pacman.conf /etc/pacman.conf
 
 ## Setup pacman hook
-sudo cp -p $HOME/work/configFiles/pacmanpkglist.hook /etc/pacman.d/hooks/
+sudo cp -p $HOME/work/configFiles/pacmanpkglist.hook /etc/pacman.d/hooks
 
 ## Sync Repository and Update Packages
 sudo pacman -Syyu
