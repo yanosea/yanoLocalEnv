@@ -217,6 +217,7 @@ xorg-xprop
 xorg-xset
 xorgproto
 xz
+yay
 zlib
 zsh
 zstd

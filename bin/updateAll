@@ -7,10 +7,10 @@ echo -e "\e[36;1mUpdate All Packages!
 ## Sync repository and update packages
 echo -e "\e[33;1mUpdate pacman Packages!
 \e[m"
-sudo pacman -Syyu
+yay -Syyu
 
 ## Delete cache
-sudo pacman -Scc
+yay -Scc
 
 # Update homeBrew packages
 ## Update packages
@@ -59,7 +59,7 @@ npm-check -u -g
 echo -e "\e[33;1m
 Update pkglist!
 \e[m"
-pacman -Qq > $HOME/work/pkglist/pacmanpkglist.txt
+yay -Qq > $HOME/work/pkglist/pacmanpkglist.txt
 brew leaves > $HOME/work/pkglist/brewpkglist.txt
 ls $HOME/go/bin > $HOME/work/pkglist/gopkglist.txt
 ghq list > $HOME/work/pkglist/ghpkglist.txt
