@@ -34,6 +34,7 @@ dnssec-anchors
 e2fsprogs
 expat
 fakeroot
+fd
 file
 filesystem
 findutils
