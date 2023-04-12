@@ -1,4 +1,4 @@
-#!/bin/bash 
+#!/bin/bash
 # Update All Packages
 echo -e "\e[36;1mUpdate All Packages!
 \e[m"
@@ -12,6 +12,9 @@ yay -Syyu
 ## Delete cache
 yay -Scc
 
+## Install insufficient Pacman packages
+yay -S --needed - < $HOME/work/pkglist/pacmanpkglist.txt
+
 # Update homeBrew packages
 ## Update packages
 echo -e "\e[33;1m
@@ -24,6 +27,9 @@ brew upgrade
 
 ## Clean up
 brew cleanup
+
+## Install insufficient brew packages
+xargs brew install < $HOME/work/pkglist/brewpkglist.txt
 
 ## Check health
 brew doctor
@@ -40,11 +46,17 @@ Update GitHub Packages!
 \e[m"
 ghq list | ghq get --update
 
+## Install insufficient GitHub packages
+xargs -I arg ghq get arg < $HOME/work/pkglist/ghpkglist.txt
+
 # Update cargo packages
 echo -e "\e[33;1m
 Update cargo Packages!
 \e[m"
 cargo install-update -a
+
+## Install insufficient cargo packages
+xargs -I arg cargo install arg < $HOME/work/pkglist/cargopkglist.txt
 
 # Update Volta
 echo -e "\e[33;1m
@@ -57,6 +69,15 @@ echo -e "\e[33;1m
 Update npm Packages!
 \e[m"
 npm-check -u -g
+
+## Install insufficient npm packages
+xargs -I arg npm install -g arg < $HOME/work/pkglist/npmpkglist.txt
+
+# Update pip Packages
+pip-review --auto
+
+## Install insufficient pip packages
+pip install -r $HOME/work/pkglist/pipkglist.txt
 
 # Update pkglist
 echo -e "\e[33;1m
