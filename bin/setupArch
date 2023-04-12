@@ -71,6 +71,8 @@ cd $HOME/ghq/github.com/sheepla/pacsummary
 sudo make install
 which pacsummary | sudo xargs mv -t $HOME/work/bin
 cd
+mkdir $HOME/.config/tmux/plugins
+ln -s $HOME/ghq/github.com/tmux-plugins/tpm $HOME/.config/tmux/plugins
 
 ## Install cargo
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
