@@ -74,6 +74,9 @@ npm-check -u -g
 xargs -I arg npm install -g arg < $HOME/work/pkglist/npmpkglist.txt
 
 # Update pip Packages
+echo -e "\e[33;1m
+Update pip Packages!
+\e[m"
 pip-review --auto
 
 ## Install insufficient pip packages
