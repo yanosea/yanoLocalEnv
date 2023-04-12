@@ -87,6 +87,18 @@ pip-review --auto
 ## Install insufficient pip packages
 pip install -r $HOME/work/pkglist/pippkglist.txt
 
+# Update fisher Packages
+echo -e "\e[33;1m
+Update fisher Packages!
+\e[m"
+env fish -c "fisher update"
+
+## Install insufficient fisher packages
+env fish -c "fisher install < $HOME/work/pkglist/fisherpkglist.txt"
+
+## Switch theme to bobthefish
+env fish -c "fisher install oh-my-fish/theme-bobthefish"
+
 # Update pkglist
 echo -e "\e[33;1m
 Update pkglist!
@@ -98,6 +110,7 @@ ghq list > $HOME/work/pkglist/ghpkglist.txt
 cargo install --list | sed -e 's/ .*//g' | tr -s '\n' > $HOME/work/pkglist/cargopkglist.txt
 volta list all | sed -n 's/^package \([^@]*\).*/\1/p' > $HOME/work/pkglist/npmpkglist.txt
 pip freeze > $HOME/work/pkglist/pippkglist.txt
+env fish -c "fisher list > $HOME/work/pkglist/fisherpkglist.txt"
 
 # DONE!
 echo -e "\e[32;1mDone!\e[m"

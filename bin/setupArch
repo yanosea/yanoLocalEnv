@@ -102,12 +102,11 @@ pip install -r $HOME/work/pkglist/pippkglist.txt
 ## Install Fisherman
 curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
 
-### Install Fish theme
-fisher install oh-my-fish/theme-bobthefish
-fisher install jethrokuan/z
-fisher install pure-fish/pure
-fisher install matchai/spacefishi
-fisher install oh-my-fish/theme-zish
+### Install Fish Plugins
+env fish -c "fisher install < $HOME/work/pkglist/fisherpkglist.txt"
+
+### Switch theme to bobthefish
+env fish -c "fisher install oh-my-fish/theme-bobthefish"
 
 # CHANGE LOGIN SHELL TO ZSH
 sudo cp -p $HOME/work/configFiles/zshenv /etc/zsh/zshenv
