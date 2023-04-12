@@ -67,9 +67,17 @@ go install github.com/spf13/cobra-cli@latest
 
 ## Install GitHub packages
 xargs -I arg ghq get arg < $HOME/work/pkglist/ghpkglist.txt
+
+### Make pacsummary
 cd $HOME/ghq/github.com/sheepla/pacsummary
 sudo make install
 which pacsummary | sudo xargs mv -t $HOME/work/bin
+
+### Make yay
+cd  $HOME/ghq/aur.archlinux.org/yay
+makepkg -si
+
+### Link tpm
 cd
 mkdir $HOME/.config/tmux/plugins
 ln -s $HOME/ghq/github.com/tmux-plugins/tpm $HOME/.config/tmux/plugins
@@ -90,7 +98,7 @@ volta install node
 volta install npm
 
 ### Install npm packages
-cat $HOME/work/pkglist/npmpkglist.txt | tr '\n' ' ' | sudo xargs npm install -g
+xargs -I arg npm install -g arg < $HOME/work/pkglist/npmpkglist.txt
 
 ## Install pip packages
 pip install -r $HOME/work/pkglist/pipkglist.txt
