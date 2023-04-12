@@ -40,6 +40,11 @@ Update go Packages!
 \e[m"
 gup update
 
+## Install insufficient go packages
+cd
+xargs -I arg go install arg < $HOME/work/pkglist/gopkglist.txt
+cd
+
 # Update GitHub Packages
 echo -e "\e[33;1m
 Update GitHub Packages!
@@ -88,7 +93,7 @@ Update pkglist!
 \e[m"
 yay -Qq > $HOME/work/pkglist/pacmanpkglist.txt
 brew leaves > $HOME/work/pkglist/brewpkglist.txt
-ls $HOME/go/bin > $HOME/work/pkglist/gopkglist.txt
+createGoPkgList > $HOME/work/pkglist/gopkglist.txt
 ghq list > $HOME/work/pkglist/ghpkglist.txt
 cargo install --list | sed -e 's/ .*//g' | tr -s '\n' > $HOME/work/pkglist/cargopkglist.txt
 volta list all | sed -n 's/^package \([^@]*\).*/\1/p' > $HOME/work/pkglist/npmpkglist.txt

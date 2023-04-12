@@ -57,13 +57,9 @@ brew tap goreleaser/tap
 xargs brew install < $HOME/work/pkglist/brewpkglist.txt
 
 ## Install go packages
-go install golang.org/x/tools/gopls@latest
-go install github.com/go-delve/delve/cmd/dlv@latest
-go install github.com/nao1215/gup@latest
-go install github.com/sheepla/pingu@latest
-go install github.com/sheepla/longgopher@latest
-go install github.com/sheepla/og@latest
-go install github.com/spf13/cobra-cli@latest
+cd
+xargs -I arg go install arg < $HOME/work/pkglist/gopkglist.txt
+cd
 
 ## Install GitHub packages
 xargs -I arg ghq get arg < $HOME/work/pkglist/ghpkglist.txt

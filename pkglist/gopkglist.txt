@@ -1,7 +1,7 @@
-cobra-cli
-dlv
-gopls
-gup
-longgopher
-og
-pingu
+github.com/spf13/cobra-cli@latest
+github.com/go-delve/delve/cmd/dlv@latest
+golang.org/x/tools/gopls@latest
+github.com/nao1215/gup@latest
+github.com/sheepla/longgopher@latest
+github.com/sheepla/og@latest
+github.com/sheepla/pingu@latest
