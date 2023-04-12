@@ -85,7 +85,7 @@ Update pip Packages!
 pip-review --auto
 
 ## Install insufficient pip packages
-pip install -r $HOME/work/pkglist/pipkglist.txt
+pip install -r $HOME/work/pkglist/pippkglist.txt
 
 # Update pkglist
 echo -e "\e[33;1m
@@ -97,7 +97,7 @@ createGoPkgList > $HOME/work/pkglist/gopkglist.txt
 ghq list > $HOME/work/pkglist/ghpkglist.txt
 cargo install --list | sed -e 's/ .*//g' | tr -s '\n' > $HOME/work/pkglist/cargopkglist.txt
 volta list all | sed -n 's/^package \([^@]*\).*/\1/p' > $HOME/work/pkglist/npmpkglist.txt
-pip freeze > $HOME/work/pkglist/pipkglist.txt
+pip freeze > $HOME/work/pkglist/pippkglist.txt
 
 # DONE!
 echo -e "\e[32;1mDone!\e[m"
