@@ -1,7 +1,0 @@
-#!/bin/bash
-for file in ${GOPATH}/bin/*; do
-    if [[ -f "$file" ]]; then
-        pkg="$(go version -m "$file" | head -n2 | tail -n1 | awk '{print $2}')"
-        echo "${pkg}@latest"
-    fi
-done

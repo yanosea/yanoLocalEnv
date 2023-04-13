@@ -1,0 +1,20 @@
+#!/bin/bash
+# Update homeBrew packages
+## Update packages
+echo -e "\e[33;1m
+Update brew Packages!
+\e[m"
+brew update
+
+## Upgrade packages
+brew upgrade
+
+## Clean up
+brew cleanup
+
+## Install insufficient brew packages
+xargs brew install < $HOME/work/pkglist/brewpkglist.txt
+
+## Check health
+brew doctor
+cho -e "\e[32;1mDone!\e[m"

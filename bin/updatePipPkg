@@ -1,0 +1,9 @@
+#!/bin/bash
+# Update pip Packages
+echo -e "\e[33;1m
+Update pip Packages!
+\e[m"
+pip-review --auto
+
+## Install insufficient pip packages
+pip install -r $HOME/work/pkglist/pippkglist.txt

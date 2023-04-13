@@ -1,0 +1,9 @@
+#!/bin/bash
+# Update GitHub Packages
+echo -e "\e[33;1m
+Update GitHub Packages!
+\e[m"
+ghq list | ghq get --update
+
+## Install insufficient GitHub packages
+xargs -I arg ghq get arg < $HOME/work/pkglist/ghpkglist.txt
