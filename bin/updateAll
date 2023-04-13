@@ -109,7 +109,7 @@ createGoPkgList > $HOME/work/pkglist/gopkglist.txt
 ghq list > $HOME/work/pkglist/ghpkglist.txt
 cargo install --list | sed -e 's/ .*//g' | tr -s '\n' > $HOME/work/pkglist/cargopkglist.txt
 volta list all | sed -n 's/^package \([^@]*\).*/\1/p' > $HOME/work/pkglist/npmpkglist.txt
-pip freeze > $HOME/work/pkglist/pippkglist.txt
+pip freeze | sed -e 's/==.*//g' > $HOME/work/pkglist/pippkglist.txt
 env fish -c "fisher list > $HOME/work/pkglist/fisherpkglist.txt"
 
 # DONE!
