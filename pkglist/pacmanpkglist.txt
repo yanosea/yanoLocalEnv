@@ -208,6 +208,7 @@ tree
 tree-sitter
 tzdata
 unibilium
+unzip
 util-linux
 util-linux-libs
 vi
