@@ -230,6 +230,7 @@ vim
 vim-runtime
 which
 xcb-proto
+xdg-utils
 xorg-xprop
 xorg-xset
 xorgproto
