@@ -17,4 +17,3 @@ xargs brew install < $HOME/work/pkglist/brewpkglist.txt
 
 ## Check health
 brew doctor
-cho -e "\e[32;1mDone!\e[m"
