@@ -65,6 +65,8 @@ grep
 groff
 guile
 gzip
+helix
+hicolor-icon-theme
 http-parser
 hwdata
 iana-etc
