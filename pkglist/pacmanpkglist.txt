@@ -286,6 +286,7 @@ sed
 shadow
 shared-mime-info
 skim
+slides
 speex
 speexdsp
 sqlite
