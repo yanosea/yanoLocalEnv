@@ -1,6 +1,7 @@
 aur.archlinux.org/yay
 github.com/alexanderjeurissen/ranger_devicons
 github.com/astj/ghq-migrator
+github.com/ranger/colorschemes
 github.com/sheepla/pacsummary
 github.com/tmux-plugins/tpm
 github.com/yanosea/mindnum
