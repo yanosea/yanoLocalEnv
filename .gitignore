@@ -6,5 +6,6 @@ dev
 bin/pacsummary
 bin/spotify-tui
 bin/spzenhan.exe
+bin/traceconv
 bin/win32yank.exe
 *.log
