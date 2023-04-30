@@ -106,6 +106,7 @@ lazygit
 lcms2
 ldns
 less
+lf
 libarchive
 libass
 libassuan
