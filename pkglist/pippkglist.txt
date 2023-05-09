@@ -12,6 +12,7 @@ click
 click-spinner
 colorama
 cryptography
+decorator
 docutils
 face
 frozenlist
@@ -24,9 +25,11 @@ packaging
 pip-review
 ply
 prompt-toolkit
+psutil
 pyasn1
 pycparser
 Pygments
+pyte
 python-dateutil
 python-dotenv
 PyYAML
