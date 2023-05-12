@@ -22,6 +22,7 @@ bash
 bat
 binutils
 bison
+bridge-utils
 brotli
 bubblewrap
 bzip2
@@ -30,6 +31,7 @@ ca-certificates-mozilla
 ca-certificates-utils
 cairo
 cantarell-fonts
+containerd
 coreutils
 cryptsetup
 curl
@@ -45,6 +47,7 @@ desktop-file-utils
 device-mapper
 diffutils
 dnssec-anchors
+docker
 duktape
 e2fsprogs
 enchant
@@ -336,6 +339,7 @@ ranger
 rav1e
 readline
 ripgrep
+runc
 sdl2
 sed
 shadow
