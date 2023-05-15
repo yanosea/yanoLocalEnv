@@ -1,3 +1,4 @@
+@fsouza/prettierd
 bash-language-server
 git-split-diffs
 npm-check
