@@ -361,6 +361,7 @@ texinfo
 tmux
 tpm2-tss
 tracker3
+trash-cli
 tree
 tree-sitter
 ttyd

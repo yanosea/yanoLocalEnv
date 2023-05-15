@@ -56,6 +56,8 @@ subprocess-tee
 textual
 toml
 tqdm
+trash-cli
+typing
 typing_extensions
 uc-micro-py
 urllib3
