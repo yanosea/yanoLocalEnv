@@ -200,6 +200,7 @@ libnftnl
 libnghttp2
 libnice
 libnl
+libnotify
 libnsl
 libogg
 libomxil-bellagio
