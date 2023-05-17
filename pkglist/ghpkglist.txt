@@ -1,4 +1,5 @@
 aur.archlinux.org/flutter
+aur.archlinux.org/paru
 aur.archlinux.org/yay
 github.com/alexanderjeurissen/ranger_devicons
 github.com/astj/ghq-migrator
