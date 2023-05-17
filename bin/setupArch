@@ -69,8 +69,12 @@ cd $HOME/ghq/github.com/sheepla/pacsummary
 sudo make install
 which pacsummary | sudo xargs mv -t $HOME/work/bin
 
-### Make yay
+### Make AUR Package
 cd  $HOME/ghq/aur.archlinux.org/yay
+makepkg -si
+cd  $HOME/ghq/aur.archlinux.org/paru
+makepkg -si
+cd  $HOME/ghq/aur.archlinux.org/flutter
 makepkg -si
 
 ### Link tpm

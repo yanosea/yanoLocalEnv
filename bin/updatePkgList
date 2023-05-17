@@ -5,7 +5,7 @@ Update pkglist!
 \e[m"
 
 ## Update Pacman Package List
-yay -Qq > $HOME/work/pkglist/pacmanpkglist.txt
+paru -Qq > $HOME/work/pkglist/pacmanpkglist.txt
 
 ## Update Brew Package List
 brew leaves > $HOME/work/pkglist/brewpkglist.txt

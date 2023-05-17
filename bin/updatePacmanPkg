@@ -3,10 +3,10 @@
 ## Sync repository and update packages
 echo -e "\e[33;1mUpdate pacman Packages!
 \e[m"
-yay -Syyu
+paru -Syyu
 
 ## Delete cache
-yay -Scc
+paru -Scc
 
 ## Install insufficient Pacman packages
-yay -S --needed - < $HOME/work/pkglist/pacmanpkglist.txt
+paru -S --needed - < $HOME/work/pkglist/pacmanpkglist.txt
