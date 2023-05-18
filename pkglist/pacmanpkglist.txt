@@ -33,6 +33,7 @@ ca-certificates-mozilla
 ca-certificates-utils
 cairo
 cantarell-fonts
+colord
 containerd
 coreutils
 cryptsetup
@@ -178,6 +179,7 @@ libgit2
 libglvnd
 libgpg-error
 libgudev
+libgusb
 libice
 libidn2
 libiec61883
@@ -282,6 +284,7 @@ libyaml
 libyuv
 licenses
 lightdm
+lightdm-gtk-greeter
 lightdm-webkit-theme-litarvan
 lightdm-webkit2-greeter
 linux-api-headers
@@ -424,6 +427,7 @@ wayland-protocols
 wayvnc
 webkit2gtk
 webp-pixbuf-loader
+weston
 which
 wlroots
 woff2
@@ -446,6 +450,8 @@ xorg-server
 xorg-server-common
 xorg-server-xephyr
 xorg-setxkbmap
+xorg-xauth
+xorg-xinit
 xorg-xkbcomp
 xorg-xmodmap
 xorg-xprop
