@@ -428,6 +428,9 @@ wayvnc
 webkit2gtk
 webp-pixbuf-loader
 weston
+wezterm
+wezterm-shell-integration
+wezterm-terminfo
 which
 wlroots
 woff2
