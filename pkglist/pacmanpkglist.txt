@@ -276,6 +276,7 @@ libxrandr
 libxrender
 libxshmfence
 libxslt
+libxss
 libxt
 libxtst
 libxv
@@ -345,6 +346,7 @@ popt
 portaudio
 procps-ng
 psmisc
+pyenv
 python
 python-attrs
 python-botocore
@@ -354,10 +356,14 @@ python-colorama
 python-cryptography
 python-dateutil
 python-decorator
+python-distlib
 python-docutils
+python-filelock
 python-jmespath
 python-packaging
 python-pip
+python-pipenv
+python-platformdirs
 python-ply
 python-psutil
 python-pyasn1
@@ -366,7 +372,10 @@ python-pyte
 python-rsa
 python-s3transfer
 python-six
+python-typing_extensions
 python-urllib3
+python-virtualenv
+python-virtualenv-clone
 python-wcwidth
 python-wheel
 python-yaml
@@ -400,7 +409,9 @@ systemd
 systemd-libs
 systemd-sysvcompat
 tar
+tcl
 texinfo
+tk
 tmux
 tpm2-tss
 tracker3

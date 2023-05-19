@@ -14,8 +14,10 @@ click-spinner
 colorama
 cryptography
 decorator
+distlib
 docutils
 face
+filelock
 frogmouth
 frozenlist
 glom
@@ -33,6 +35,8 @@ multidict
 openai
 packaging
 pip-review
+pipenv
+platformdirs
 ply
 prompt-toolkit
 psutil
@@ -61,6 +65,8 @@ typing
 typing_extensions
 uc-micro-py
 urllib3
+virtualenv
+virtualenv-clone
 wanna
 wcwidth
 xdg
