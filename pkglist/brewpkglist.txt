@@ -1,6 +1,5 @@
 arrow2nd/tap/gomi-rename
 arrow2nd/tap/nekome
-dbus
 ghq
 goreleaser/tap/goreleaser
 libevent
