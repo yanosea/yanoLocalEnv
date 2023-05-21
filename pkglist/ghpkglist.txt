@@ -6,6 +6,7 @@ github.com/astj/ghq-migrator
 github.com/equalsraf/win32yank
 github.com/kaz399/spzenhan.vim
 github.com/ranger/colorschemes
+github.com/ryanoasis/nerd-fonts
 github.com/sheepla/pacsummary
 github.com/tmux-plugins/tpm
 github.com/yanosea/mindnum
