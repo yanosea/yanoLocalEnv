@@ -1,0 +1,9 @@
+#!/bin/bash
+# Update Opam Packages
+echo -e "\e[33;1m
+Update opam Packages!
+\e[m"
+opam update
+
+## Install insufficient opam packages
+xargs -I arg opam install arg < $HOME/work/pkglist/opampkglist.txt

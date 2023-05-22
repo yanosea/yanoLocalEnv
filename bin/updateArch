@@ -24,6 +24,9 @@ updateVoltaPkg
 # Update pip packages
 updatePipPkg
 
+# Update opam packages
+updateOpamPkg
+
 # Update Fisher plugins
 updateFisherPlug
 
