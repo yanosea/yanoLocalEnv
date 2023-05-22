@@ -32,5 +32,7 @@ result
 seq
 sqlite3
 tiny_httpd
+topkg
+xmlm
 yojson
 zarith
