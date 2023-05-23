@@ -3,7 +3,12 @@
 echo -e "\e[33;1m
 Update opam Packages!
 \e[m"
+eval $(opam env)
 opam update
+eval $(opam env)
+opam upgrade
+eval $(opam env)
 
 ## Install insufficient opam packages
 xargs -I arg opam install arg < $HOME/work/pkglist/opampkglist.txt
+eval $(opam env)
