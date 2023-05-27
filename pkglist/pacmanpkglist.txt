@@ -488,6 +488,7 @@ seatd
 sed
 shadow
 shared-mime-info
+sheldon
 shellcheck
 skim
 slides
