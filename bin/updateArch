@@ -28,7 +28,7 @@ updatePipPkg
 updateOpamPkg
 
 # Update Fisher plugins
-updateFisherPlug
+# updateFisherPlug
 
 # Update pkglist
 updatePkgList
