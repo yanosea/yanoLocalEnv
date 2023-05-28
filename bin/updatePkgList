@@ -31,8 +31,5 @@ volta list all | sed -n 's/^package \(@\{0,1\}[^@]*\).*/\1/p' > $HOME/work/pkgli
 ## Update pip Package List
 pip freeze | sed -e 's/==.*//g' > $HOME/work/pkglist/pippkglist.txt
 
-## Update opam Package List
-opam list -s > $HOME/work/pkglist/opampkglist.txt
-
 ## Update Fisher Package List
 env fish -c "fisher list > $HOME/work/pkglist/fisherpkglist.txt"
