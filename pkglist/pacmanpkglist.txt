@@ -12,6 +12,7 @@ arch-install-scripts
 archlinux-keyring
 argon2
 at-spi2-core
+atkmm
 attr
 audit
 autoconf
@@ -32,8 +33,10 @@ ca-certificates
 ca-certificates-mozilla
 ca-certificates-utils
 cairo
+cairomm
 camlp-streams
 cantarell-fonts
+chrono-date
 colord
 containerd
 coreutils
@@ -72,6 +75,7 @@ fish
 flac
 flex
 flutter
+fmt
 fontconfig
 freetype2
 fribidi
@@ -94,6 +98,7 @@ github-cli
 glib-networking
 glib2
 glibc
+glibmm
 glu
 gmp
 gnome-backgrounds
@@ -114,8 +119,10 @@ gssdp
 gst-plugins-bad-libs
 gst-plugins-base-libs
 gstreamer
+gtk-layer-shell
 gtk-update-icon-cache
 gtk3
+gtkmm3
 guile
 gum
 gupnp
@@ -192,6 +199,8 @@ jre-openjdk
 jre-openjdk-headless
 json-c
 json-glib
+jsoncpp
+kanshi
 kbd
 keyutils
 kmod
@@ -203,6 +212,7 @@ lcms2
 ldns
 less
 lf
+libappindicator-gtk3
 libarchive
 libass
 libassuan
@@ -212,6 +222,7 @@ libavif
 libbluray
 libbpf
 libbs2b
+libbsd
 libcap
 libcap-ng
 libcloudproviders
@@ -219,6 +230,8 @@ libcolord
 libcups
 libdaemon
 libdatrie
+libdbusmenu-glib
+libdbusmenu-gtk3
 libdrm
 libedit
 libelf
@@ -237,6 +250,8 @@ libgusb
 libice
 libidn2
 libiec61883
+libimobiledevice
+libindicator-gtk3
 libinput
 libisl
 libjpeg-turbo
@@ -245,10 +260,12 @@ libksba
 libldap
 libluv
 libmanette
+libmd
 libmfx
 libmnl
 libmodplug
 libmpc
+libmpdclient
 libnet
 libnetfilter_conntrack
 libnfnetlink
@@ -264,6 +281,8 @@ libopenmpt
 libp11-kit
 libpcap
 libpciaccess
+libpipewire
+libplist
 libpng
 libproxy
 libpsl
@@ -274,6 +293,7 @@ libsamplerate
 libsasl
 libseccomp
 libsecret
+libsigc++
 libsm
 libsndfile
 libsoup
@@ -293,9 +313,11 @@ libtool
 libunistring
 libunwind
 libusb
+libusbmuxd
 libutempter
 libuv
 libva
+libvarlink
 libvdpau
 libverto
 libvorbis
@@ -304,6 +326,7 @@ libvterm
 libwacom
 libwebp
 libwebsockets
+libwireplumber
 libwpe
 libx11
 libxau
@@ -355,6 +378,7 @@ lzo
 m4
 mailcap
 make
+mako
 md4c
 mesa
 mkinitcpio
@@ -419,10 +443,12 @@ opus
 orc
 p11-kit
 pacman
+pacman-contrib
 pacman-mirrorlist
 pam
 pambase
 pango
+pangomm
 paru
 patch
 pciutils
@@ -435,6 +461,7 @@ perl-timedate
 pinentry
 pixman
 pkgconf
+playerctl
 polkit
 popt
 portaudio
@@ -492,6 +519,8 @@ sheldon
 shellcheck
 skim
 slides
+sndio
+spdlog
 speex
 speexdsp
 sqlite
@@ -500,6 +529,8 @@ sudo
 svt-av1
 sway
 swaybg
+swayidle
+swaylock
 sysfsutils
 systemd
 systemd-libs
@@ -520,6 +551,8 @@ ttyd
 tzdata
 unibilium
 unzip
+upower
+usbmuxd
 util-linux
 util-linux-libs
 v4l-utils
@@ -530,6 +563,7 @@ vim
 vim-runtime
 vmaf
 vulkan-icd-loader
+waybar
 wayland
 wayland-protocols
 wayvnc

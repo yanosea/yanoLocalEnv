@@ -24,6 +24,7 @@ glom
 h11
 httpcore
 httpx
+i3ipc
 idna
 importlib-metadata
 jmespath
@@ -46,6 +47,7 @@ Pygments
 pyte
 python-dateutil
 python-dotenv
+python-xlib
 PyYAML
 questionary
 ranger-fm
