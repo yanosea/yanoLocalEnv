@@ -27,6 +27,9 @@ updatePipPkg
 # Update Fisher plugins
 # updateFisherPlug
 
+# Update zsh plugins
+updateZshplug
+
 # Update pkglist
 updatePkgList
 

@@ -1,0 +1,9 @@
+#!/bin/bash
+# Update zsh Plugins
+echo -e "\e[33;1m
+Update zsh Plugins!
+\e[m"
+sheldon lock --update
+
+# reload sheldon
+source $XDG_CONFIG_HOME/zsh/.zshrc
