@@ -1,4 +1,7 @@
 @fsouza/prettierd
+autoprefixer
 bash-language-server
 git-split-diffs
 npm-check
+postcss
+tailwindcss
