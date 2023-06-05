@@ -3,7 +3,7 @@
 ## Sync repository and update packages
 echo -e "\e[33;1mUpdate pacman Packages!
 \e[m"
-paru -Syyu
+paru -Syyu --noconfirm --skipreview
 
 ## Delete cache
 paru -Scc
