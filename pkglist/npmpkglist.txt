@@ -1,7 +1,6 @@
 @fsouza/prettierd
 astro
 autoprefixer
-bash-language-server
 git-split-diffs
 npm-check
 pnpm
