@@ -6,7 +6,7 @@ echo -e "\e[33;1mUpdate pacman Packages!
 paru -Syyu --noconfirm --skipreview
 
 ## Delete cache
-paru -Scc
+paru -Scc --noconfirm --skipreview
 
 ## Install insufficient Pacman packages
-paru -S --needed - < $HOME/work/pkglist/pacmanpkglist.txt
+paru -S --needed --noconfirm --skipreview - < $HOME/work/pkglist/pacmanpkglist.txt
