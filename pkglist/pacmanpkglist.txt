@@ -512,6 +512,8 @@ trash-cli
 tree
 tree-sitter
 tslib
+ttf-jetbrains-mono
+ttf-roboto
 ttyd
 tzdata
 unibilium
