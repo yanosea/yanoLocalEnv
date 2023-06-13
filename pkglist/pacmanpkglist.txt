@@ -98,6 +98,7 @@ glib-networking
 glib2
 glibc
 glibmm
+glow
 glu
 gmp
 gnome-backgrounds
@@ -382,6 +383,7 @@ md4c
 mesa
 mkinitcpio
 mkinitcpio-busybox
+mods
 mpfr
 mpg123
 msgpack-c
@@ -482,6 +484,7 @@ shadow
 shared-mime-info
 sheldon
 shellcheck
+skate
 skim
 slides
 sndio
