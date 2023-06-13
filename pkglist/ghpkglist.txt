@@ -1,11 +1,9 @@
 aur.archlinux.org/flutter
 aur.archlinux.org/paru
 aur.archlinux.org/yay
-github.com/alexanderjeurissen/ranger_devicons
 github.com/astj/ghq-migrator
 github.com/equalsraf/win32yank
 github.com/kaz399/spzenhan.vim
-github.com/ranger/colorschemes
 github.com/ryanoasis/nerd-fonts
 github.com/sheepla/pacsummary
 github.com/tmux-plugins/tpm

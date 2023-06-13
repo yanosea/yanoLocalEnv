@@ -50,7 +50,6 @@ python-dotenv
 python-xlib
 PyYAML
 questionary
-ranger-fm
 requests
 rfc3986
 rich
