@@ -102,6 +102,7 @@ xargs -I arg npm install -g arg < $HOME/work/pkglist/npmpkglist.txt
 
 ## Install pip packages
 pip install -r $HOME/work/pkglist/pippkglist.txt
+ln -s $HOME/ghq/github.com/yanosea/yanoDotFiles/.config/pip $HOME/.pip
 
 ## Install Fisherman
 curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
