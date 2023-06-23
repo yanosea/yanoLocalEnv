@@ -381,6 +381,12 @@ make
 mako
 md4c
 mesa
+mingw-w64-binutils
+mingw-w64-crt
+mingw-w64-gcc
+mingw-w64-headers
+mingw-w64-winpthreads
+mingw-w64-zlib
 mkinitcpio
 mkinitcpio-busybox
 mods
@@ -395,6 +401,7 @@ neofetch
 neovim
 nettle
 npth
+nsis
 nspr
 nss
 ntp
@@ -477,6 +484,7 @@ readline
 ripgrep
 runc
 rust
+scons
 sdl2
 seatd
 sed

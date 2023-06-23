@@ -55,6 +55,7 @@ rfc3986
 rich
 rsa
 s3transfer
+SCons
 six
 sniffio
 subprocess-tee
