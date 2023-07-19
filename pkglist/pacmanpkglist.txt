@@ -514,6 +514,7 @@ systemd-sysvcompat
 tar
 tcl
 texinfo
+tig
 tk
 tmux
 tpm2-tss
