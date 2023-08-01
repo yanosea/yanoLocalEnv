@@ -3,9 +3,12 @@ credentials
 dev
 
 # IGNORE FILE
+bin/completion.zsh
+bin/key-bindings.zsh
 bin/pacsummary
 bin/spotify-tui
 bin/spzenhan.exe
 bin/traceconv
 bin/win32yank.exe
+.DS_Store
 *.log

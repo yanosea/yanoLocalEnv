@@ -13,7 +13,11 @@ brew upgrade
 brew cleanup
 
 ## Install insufficient brew packages
-xargs brew install < $HOME/work/pkglist/brewpkglist.txt
+if [ "$OS" = "Linux" ]; then
+    xargs brew install < $HOME/work/pkglist/archbrewpkglist.txt
+elif [ "$OS" = "Darwin" ]; then
+    xargs brew install < $HOME/work/pkglist/macbrewpkglist.txt
+fi
 
 ## Check health
 brew doctor

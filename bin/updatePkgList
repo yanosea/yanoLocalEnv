@@ -5,10 +5,17 @@ Update pkglist!
 \e[m"
 
 ## Update Pacman Package List
-paru -Qq > $HOME/work/pkglist/pacmanpkglist.txt
+if [ "$OS" = "Linux" ]; then
+    paru -Qq > $HOME/work/pkglist/pacmanpkglist.txt
+fi
 
 ## Update Brew Package List
-brew leaves > $HOME/work/pkglist/brewpkglist.txt
+if [ "$OS" = "Linux" ]; then
+    brew leaves > $HOME/work/pkglist/archbrewpkglist.txt
+elif [ "$OS" = "Darwin" ]; then
+    brew leaves > $HOME/work/pkglist/macbrewpkglist.txt
+    brew list --cask -1 >> $HOME/work/pkglist/macbrewpkglist.txt
+fi
 
 ## Update Go Package List
 rm $HOME/work/pkglist/gopkglist.txt
@@ -30,6 +37,3 @@ volta list all | sed -n 's/^package \(@\{0,1\}[^@]*\).*/\1/p' > $HOME/work/pkgli
 
 ## Update pip Package List
 pip freeze | sed -e 's/==.*//g' > $HOME/work/pkglist/pippkglist.txt
-
-## Update Fisher Package List
-env fish -c "fisher list > $HOME/work/pkglist/fisherpkglist.txt"

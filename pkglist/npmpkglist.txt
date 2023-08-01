@@ -2,6 +2,7 @@
 astro
 autoprefixer
 git-split-diffs
+n8n
 npm-check
 pnpm
 postcss
