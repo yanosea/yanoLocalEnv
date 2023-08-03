@@ -1,0 +1,84 @@
+#!/bin/bash
+# install homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# install git
+brew install git
+
+# make ghq yanosea directory
+mkdir -p $HOME/ghq/github.com/yanosea
+
+# clone yanoLocalEnv
+git clone https://github.com/yanosea/yanoLocalEnv.git $HOME/ghq/github.com/yanosea
+
+# link yanoLocalEnv
+ln -s $HOME/ghq/github.com/yanosea/yanoLocalEnv $HOME/work/
+
+# clone yanoDotFiles
+git clone https://github.com/yanosea/yanoDotFiles.git $HOME/ghq/github.com/yanosea
+
+# link yanoDotFile
+ln -s $HOME/ghq/github.com/yanosea/yanoDotFiles $HOME/dotfiles/
+ln -s $HOME/ghq/github.com/yanosea/yanoDotFiles/.config $HOME/.config/
+ln -s $HOME/ghq/github.com/yanosea/yanoDotFiles/.vim $HOME/.vim/
+ln -s $HOME/ghq/github.com/yanosea/yanoDotFiles/.wanna $HOME/.wanna/
+
+# make XDG directories
+sudo cp -p $HOME/work/configFiles/xdgenv.sh /etc/profile.d/xdgenv.sh # TODO: change for Mac
+mkdir -p $HOME/.cache
+mkdir -p $HOME/.local/share
+mkdir -p $HOME/.local/state
+
+# setting
+## setup sysctl config files # TODO: change for mac
+sudo cp -p $HOME/work/configFiles/sysctl.conf /etc/sysctl.conf
+sudo cp -p $HOME/work/configFiles/timesyncd.conf /etc/systemd/timesyncd.conf
+sudo cp -p $HOME/work/configFiles/systemd-timesyncd.service /usr/lib/systemd/system/systemd-timesyncd.service
+
+# install packages
+## install brew packages
+brew tap arrow2nd/tap
+brew tap goreleaser/tap
+xargs brew install < $HOME/work/pkglist/macbrewpkglist.txt
+
+## install go packages
+cd
+xargs -I arg go install arg < $HOME/work/pkglist/gopkglist.txt
+cd
+
+## install GitHub packages
+xargs -I arg ghq get arg < $HOME/work/pkglist/ghpkglist.txt
+
+### link tpm
+cd
+mkdir $HOME/.config/tmux/plugins
+ln -s $HOME/ghq/github.com/tmux-plugins/tpm $HOME/.config/tmux/plugins
+
+## install cargo
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+### install cargo packages
+xargs -I arg cargo install arg < $HOME/work/pkglist/cargopkglist.txt
+
+## install volta
+curl https://get.volta.sh | bash
+
+### install node LTS
+volta install node
+
+### install npm LTS
+volta install npm
+
+### install npm packages
+xargs -I arg npm install -g arg < $HOME/work/pkglist/npmpkglist.txt
+
+## install pip packages
+pip install -r $HOME/work/pkglist/pippkglist.txt
+ln -s $HOME/ghq/github.com/yanosea/yanoDotFiles/.config/pip $HOME/.pip
+
+# change login shell to zsh # TODO: change for mac
+sudo cp -p $HOME/work/configFiles/zshenv /etc/zsh/zshenv
+chsh -s /usr/sbin/zsh
+
+# DONE!
+echo Done!
