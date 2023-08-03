@@ -1,75 +1,75 @@
 #!/bin/bash
-# INSTALL Git
+# install git
 sudo pacman -S Git
 
-# MAKE GHQ yanosea DIRECTORY
+# make ghq yanosea directory
 mkdir -p $HOME/ghq/github.com/yanosea
 
-# CLONE yanoseaLocalEnv
+# clone yanoLocalEnv
 git clone https://github.com/yanosea/yanoLocalEnv.git $HOME/ghq/github.com/yanosea
 
-# LINK yanoLocalEnv
+# link yanoLocalEnv
 ln -s $HOME/ghq/github.com/yanosea/yanoLocalEnv $HOME/work/
 
-# CLONE yanoDotFiles
+# clone yanoDotFiles
 git clone https://github.com/yanosea/yanoDotFiles.git $HOME/ghq/github.com/yanosea
 
-# LINK yanoDotFile
+# link yanoDotFile
 ln -s $HOME/ghq/github.com/yanosea/yanoDotFiles $HOME/dotfiles/
 ln -s $HOME/ghq/github.com/yanosea/yanoDotFiles/.config $HOME/.config/
 ln -s $HOME/ghq/github.com/yanosea/yanoDotFiles/.vim $HOME/.vim/
 ln -s $HOME/ghq/github.com/yanosea/yanoDotFiles/.wanna $HOME/.wanna/
 
-# MAKE XDG DIRECTORY
+# make XDG directories
 sudo cp -p $HOME/work/configFiles/xdgenv.sh /etc/profile.d/xdgenv.sh
 mkdir -p $HOME/.cache
 mkdir -p $HOME/.local/share
 mkdir -p $HOME/.local/state
 
-# SETTING
-## Optimize Pacman mirror server
+# setting
+## optimize pacman mirror server
 sudo cp -p $HOME/work/configFiles/mirrorlist /etc/pacman.d/mirrorlist
 
-## Setup pacman configFiles
+## setup pacman configFiles
 sudo cp -p $HOME/work/configFiles/pacman.conf /etc/pacman.conf
 
-## Setup pacman hook
+## setup pacman hook
 sudo cp -p $HOME/work/configFiles/pacmanpkglist.hook /etc/pacman.d/hooks
 
-## Sync Repository and Update Packages
+## sync repository and update packages
 sudo pacman -Syyu
 
-## Setup sysctl configFiles
+## setup sysctl config files
 sudo cp -p $HOME/work/configFiles/sysctl.conf /etc/sysctl.conf
 sudo cp -p $HOME/work/configFiles/timesyncd.conf /etc/systemd/timesyncd.conf
 sudo cp -p $HOME/work/configFiles/systemd-timesyncd.service /usr/lib/systemd/system/systemd-timesyncd.service
 
-# INSTALL PACKAGES
-## Install pacman packages from list
+# install packages
+## install pacman packages
 sudo pacman -S --needed - < $HOME/work/pkglist/pacmanpkglist.txt
 
-## Install Linuxbrew
+## install Linuxbrew
 sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
 
-## Install Linuxbrew packages
+## install Linuxbrew packages
 brew tap arrow2nd/tap
 brew tap goreleaser/tap
 xargs brew install < $HOME/work/pkglist/brewpkglist.txt
 
-## Install go packages
+## install go packages
 cd
 xargs -I arg go install arg < $HOME/work/pkglist/gopkglist.txt
 cd
 
-## Install GitHub packages
+## install GitHub packages
 xargs -I arg ghq get arg < $HOME/work/pkglist/ghpkglist.txt
 
-### Make pacsummary
+### make pacsummary
 cd $HOME/ghq/github.com/sheepla/pacsummary
 sudo make install
 which pacsummary | sudo xargs mv -t $HOME/work/bin
 
-### Make AUR Package
+### make AUR package
 cd  $HOME/ghq/aur.archlinux.org/yay
 makepkg -si
 cd  $HOME/ghq/aur.archlinux.org/paru
@@ -77,43 +77,34 @@ makepkg -si
 cd  $HOME/ghq/aur.archlinux.org/flutter
 makepkg -si
 
-### Link tpm
+### link tpm
 cd
 mkdir $HOME/.config/tmux/plugins
 ln -s $HOME/ghq/github.com/tmux-plugins/tpm $HOME/.config/tmux/plugins
 
-## Install cargo
+## install cargo
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
-### Install cargo packages
+### install cargo packages
 xargs -I arg cargo install arg < $HOME/work/pkglist/cargopkglist.txt
 
-## Install Volta
+## install volta
 curl https://get.volta.sh | bash
 
-### Install node LTS
+### install node LTS
 volta install node
 
-### Install npm LTS
+### install npm LTS
 volta install npm
 
-### Install npm packages
+### install npm packages
 xargs -I arg npm install -g arg < $HOME/work/pkglist/npmpkglist.txt
 
-## Install pip packages
+## install pip packages
 pip install -r $HOME/work/pkglist/pippkglist.txt
 ln -s $HOME/ghq/github.com/yanosea/yanoDotFiles/.config/pip $HOME/.pip
 
-## Install Fisherman
-curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
-
-### Install Fish Plugins
-env fish -c "fisher install < $HOME/work/pkglist/fisherpkglist.txt"
-
-### Switch theme to bobthefish
-env fish -c "fisher install oh-my-fish/theme-bobthefish"
-
-# CHANGE LOGIN SHELL TO ZSH
+# change login shell to zsh
 sudo cp -p $HOME/work/configFiles/zshenv /etc/zsh/zshenv
 chsh -s /usr/sbin/zsh
 
