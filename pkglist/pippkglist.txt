@@ -29,6 +29,7 @@ idna
 importlib-metadata
 jmespath
 linkify-it-py
+lit
 markdown-it-py
 mdit-py-plugins
 mdurl
@@ -58,6 +59,7 @@ s3transfer
 SCons
 six
 sniffio
+speedtest-cli
 subprocess-tee
 textual
 toml
