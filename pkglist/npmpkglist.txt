@@ -6,4 +6,5 @@ n8n
 npm-check
 pnpm
 postcss
+qiita-cli
 tailwindcss
