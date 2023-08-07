@@ -7,3 +7,4 @@ libevent
 libxcb
 pkg-config
 portaudio
+yanosea/tap/mindnum
