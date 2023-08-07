@@ -1,6 +1,7 @@
 arrow2nd/tap/gomi-rename
 arrow2nd/tap/nekome
 ghq
+golangci-lint
 goreleaser/tap/goreleaser
 libevent
 libxcb
