@@ -1,9 +1,9 @@
 #!/bin/bash
-# Update cargo packages
+# update cargo packages
 echo -e "\e[33;1m
-Update cargo Packages!
+update cargo Packages!
 \e[m"
 cargo install-update -a
 
-## Install insufficient cargo packages
-xargs -I arg cargo install arg < $HOME/work/pkglist/cargopkglist.txt
+## install insufficient cargo packages
+xargs -I arg cargo install arg < "$HOME"/work/pkglist/cargopkglist.txt

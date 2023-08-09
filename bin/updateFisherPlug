@@ -1,12 +1,12 @@
 #!/bin/bash
-# Update fisher Plugins
+# update fisher plugins
 echo -e "\e[33;1m
-Update Fisher Plugins!
+update fisher plugins!
 \e[m"
 env fish -c "fisher update"
 
-## Install insufficient fisher packages
+## install insufficient fisher packages
 env fish -c "fisher install < $HOME/work/pkglist/fisherpkglist.txt"
 
-## Switch theme to bobthefish
+## switch theme to bobthefish
 env fish -c "fisher install oh-my-fish/theme-bobthefish"

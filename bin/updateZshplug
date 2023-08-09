@@ -1,9 +1,10 @@
 #!/bin/bash
-# Update zsh Plugins
+# update zsh Plugins
 echo -e "\e[33;1m
-Update zsh Plugins!
+update zsh Plugins!
 \e[m"
 sheldon lock --update
 
 # reload sheldon
-source $XDG_CONFIG_HOME/zsh/.zshrc
+# shellcheck disable=SC1091
+source "$XDG_CONFIG_HOME"/zsh/.zshrc

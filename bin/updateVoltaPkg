@@ -1,15 +1,15 @@
 #!/bin/bash
-# Update Volta
+# update Volta
 echo -e "\e[33;1m
-Update Volta!
+update volta!
 \e[m"
 curl https://get.volta.sh | bash -s -- --skip-setup
 
-## Update npm Packages
+## update npm Packages
 echo -e "\e[33;1m
-Update npm Packages!
+update npm Packages!
 \e[m"
 npm-check -u -g
 
-## Install insufficient npm packages
-xargs -I arg npm install -g arg < $HOME/work/pkglist/npmpkglist.txt
+## install insufficient npm packages
+xargs -I arg npm install -g arg < "$HOME"/work/pkglist/npmpkglist.txt

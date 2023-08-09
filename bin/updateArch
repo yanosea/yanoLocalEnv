@@ -1,37 +1,37 @@
 #!/bin/bash
-# Update Arch Env Packages
-echo -e "\e[36;1mUpdate All Packages!
+# update arch env
+echo -e "\e[36;1mupdate arch env!
 \e[m"
 
-# Update Pacman packages
+# update pacman packages
 updatePacmanPkg
 
-# Update homeBrew packages
+# update homeBrew packages
 updateBrewPkg
 
-# Update go packages
+# update go packages
 updateGoPkg
 
-# Update GitHub packages
+# update github packages
 updateGitHubPkg
 
-# Update cargo packages
+# update cargo packages
 updateCargoPkg
 
-# Update Volta and npm packages
+# update volta and npm packages
 updateVoltaPkg
 
-# Update pip packages
+# update pip packages
 updatePipPkg
 
-# Update Fisher plugins
+# update fisher plugins
 # updateFisherPlug
 
-# Update zsh plugins
+# update zsh plugins
 updateZshplug
 
-# Update pkglist
+# update pkglist
 updatePkgList
 
-# DONE!
-echo -e "\e[32;1mDone!\e[m"
+# done!
+echo -e "\e[32;1mdone!\e[m"

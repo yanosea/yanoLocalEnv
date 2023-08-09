@@ -1,48 +1,48 @@
 #!/bin/bash
-# Update pkglist
+# update pkglist
 echo -e "\e[33;1m
-Update pkglist!
+update pkglist!
 \e[m"
 
-## Update Pacman Package List
+## update Pacman Package List
 if [ "$OS" = "Linux" ]; then
-    paru -Qq > $HOME/work/pkglist/pacmanpkglist.txt
+    paru -Qq > "$HOME"/work/pkglist/pacmanpkglist.txt
 fi
 
-## Update Brew Package List
+## update Brew Package List
 if [ "$OS" = "Linux" ]; then
-    brew leaves > $HOME/work/pkglist/archbrewpkglist.txt
+    brew leaves > "$HOME"/work/pkglist/archbrewpkglist.txt
 elif [ "$OS" = "Darwin" ]; then
-    brew leaves > $HOME/work/pkglist/macbrewpkglist.txt
-    brew list --cask -1 >> $HOME/work/pkglist/macbrewpkglist.txt
+    brew leaves > "$HOME"/work/pkglist/macbrewpkglist.txt
+    brew list --cask -1 >> "$HOME"/work/pkglist/macbrewpkglist.txt
 fi
 
-## Update Go Package List
-rm $HOME/work/pkglist/gopkglist.txt
-for file in ${GOPATH}/bin/*; do
+## update Go Package List
+rm "$HOME"/work/pkglist/gopkglist.txt
+for file in "$GOPATH"/bin/*; do
     if [[ -f "$file" ]]; then
         pkg="$(go version -m "$file" | head -n2 | tail -n1 | awk '{print $2}')"
-        echo "${pkg}@latest" >> $HOME/work/pkglist/gopkglist.txt
+        echo "${pkg}@latest" >> "$HOME"/work/pkglist/gopkglist.txt
     fi
 done
 
-## Update GitHub Package List
-rm $HOME/work/pkglist/ghpkglist.txt
+## update GitHub Package List
+rm "$HOME"/work/pkglist/ghpkglist.txt
 for repo in $(ghq list); do
     visibility=$(gh repo view "$repo" --json visibility --jq '.visibility' 2>/dev/null)
     exit_status=$?
-    if [ $exit_status -eq 0 ] && [ "$visibility" == "PUBLIC" ]; then
-        echo $repo >> $HOME/work/pkglist/ghpkglist.txt
-    elif [ $exit_status -eq 1 ]; then
-        echo $repo >> $HOME/work/pkglist/ghpkglist.txt
+    if [ "$exit_status" -eq 0 ] && [ "$visibility" == "PUBLIC" ]; then
+        echo "$repo" >> "$HOME"/work/pkglist/ghpkglist.txt
+    elif [ "$exit_status" -eq 1 ]; then
+        echo "$repo" >> "$HOME"/work/pkglist/ghpkglist.txt
     fi
 done
 
-## Update cargo Package List
-cargo install --list | sed -e 's/ .*//g' | tr -s '\n' > $HOME/work/pkglist/cargopkglist.txt
+## update cargo Package List
+cargo install --list | sed -e 's/ .*//g' | tr -s '\n' > "$HOME"/work/pkglist/cargopkglist.txt
 
-## Update npm Package List
-volta list all | sed -n 's/^package \(@\{0,1\}[^@]*\).*/\1/p' > $HOME/work/pkglist/npmpkglist.txt
+## update npm Package List
+volta list all | sed -n 's/^package \(@\{0,1\}[^@]*\).*/\1/p' > "$HOME"/work/pkglist/npmpkglist.txt
 
-## Update pip Package List
-pip freeze | sed -e 's/==.*//g' > $HOME/work/pkglist/pippkglist.txt
+## update pip Package List
+pip freeze | sed -e 's/==.*//g' > "$HOME"/work/pkglist/pippkglist.txt

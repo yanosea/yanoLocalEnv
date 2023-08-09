@@ -1,23 +1,23 @@
 #!/bin/bash
-# Update homeBrew packages
-## Update packages
+# update homebrew packages
+## update packages
 echo -e "\e[33;1m
-Update brew Packages!
+update brew Packages!
 \e[m"
 brew update
 
-## Upgrade packages
+## upgrade packages
 brew upgrade
 
-## Clean up
+## clean up
 brew cleanup
 
-## Install insufficient brew packages
+## install insufficient brew packages
 if [ "$OS" = "Linux" ]; then
-    xargs brew install < $HOME/work/pkglist/archbrewpkglist.txt
+    xargs brew install < "$HOME"/work/pkglist/archbrewpkglist.txt
 elif [ "$OS" = "Darwin" ]; then
-    xargs brew install < $HOME/work/pkglist/macbrewpkglist.txt
+    xargs brew install < "$HOME"/work/pkglist/macbrewpkglist.txt
 fi
 
-## Check health
+## check health
 brew doctor

@@ -1,12 +1,9 @@
 #!/bin/bash
-# Update go packages
+# update go packages
 echo -e "\e[33;1m
-Update go Packages!
+update go Packages!
 \e[m"
 gup update
 
-## Install insufficient go packages
-cd
-xargs -I arg go install arg < $HOME/work/pkglist/gopkglist.txt
-cd
-echo -e "\e[32;1mDone!\e[m"
+## install insufficient go packages
+xargs -I arg go install arg < "$HOME"/work/pkglist/gopkglist.txt

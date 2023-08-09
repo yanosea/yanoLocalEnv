@@ -1,12 +1,12 @@
 #!/bin/bash
-# Update Pacman packages
-## Sync repository and update packages
-echo -e "\e[33;1mUpdate pacman Packages!
+# update pacman packages
+## sync repository and update packages
+echo -e "\e[33;1mupdate pacman packages!
 \e[m"
 paru -Syyu --noconfirm --skipreview
 
-## Delete cache
+## delete cache
 paru -Scc --noconfirm --skipreview
 
-## Install insufficient Pacman packages
-paru -S --needed --noconfirm --skipreview - < $HOME/work/pkglist/pacmanpkglist.txt
+## install insufficient pacman packages
+paru -S --needed --noconfirm --skipreview - < "$HOME"/work/pkglist/pacmanpkglist.txt

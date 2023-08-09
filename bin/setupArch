@@ -1,52 +1,56 @@
 #!/bin/bash
+# setup arch env
+echo -e "\e[36;1msetup arch env!
+\e[m"
+
 # install git
 sudo pacman -S Git
 
 # make ghq yanosea directory
-mkdir -p $HOME/ghq/github.com/yanosea
+mkdir -p "$HOME"/ghq/github.com/yanosea
 
 # clone yanoLocalEnv
-git clone https://github.com/yanosea/yanoLocalEnv.git $HOME/ghq/github.com/yanosea
+git clone https://github.com/yanosea/yanoLocalEnv.git "$HOME"/ghq/github.com/yanosea
 
 # link yanoLocalEnv
-ln -s $HOME/ghq/github.com/yanosea/yanoLocalEnv $HOME/work/
+ln -s "$HOME"/ghq/github.com/yanosea/yanoLocalEnv "$HOME"/work/
 
 # clone yanoDotFiles
-git clone https://github.com/yanosea/yanoDotFiles.git $HOME/ghq/github.com/yanosea
+git clone https://github.com/yanosea/yanoDotFiles.git "$HOME"/ghq/github.com/yanosea
 
 # link yanoDotFile
-ln -s $HOME/ghq/github.com/yanosea/yanoDotFiles $HOME/dotfiles/
-ln -s $HOME/ghq/github.com/yanosea/yanoDotFiles/.config $HOME/.config/
-ln -s $HOME/ghq/github.com/yanosea/yanoDotFiles/.vim $HOME/.vim/
-ln -s $HOME/ghq/github.com/yanosea/yanoDotFiles/.wanna $HOME/.wanna/
+ln -s "$HOME"/ghq/github.com/yanosea/yanoDotFiles "$HOME"/dotfiles/
+ln -s "$HOME"/ghq/github.com/yanosea/yanoDotFiles/.config "$HOME"/.config/
+ln -s "$HOME"/ghq/github.com/yanosea/yanoDotFiles/.vim "$HOME"/.vim/
+ln -s "$HOME"/ghq/github.com/yanosea/yanoDotFiles/.wanna "$HOME"/.wanna/
 
 # make XDG directories
-sudo cp -p $HOME/work/configFiles/xdgenv.sh /etc/profile.d/xdgenv.sh
-mkdir -p $HOME/.cache
-mkdir -p $HOME/.local/share
-mkdir -p $HOME/.local/state
+sudo cp -p "$HOME"/work/configFiles/xdgenv.sh /etc/profile.d/xdgenv.sh
+mkdir -p "$HOME"/.cache
+mkdir -p "$HOME"/.local/share
+mkdir -p "$HOME"/.local/state
 
 # setting
 ## optimize pacman mirror server
-sudo cp -p $HOME/work/configFiles/mirrorlist /etc/pacman.d/mirrorlist
+sudo cp -p "$HOME"/work/configFiles/mirrorlist /etc/pacman.d/mirrorlist
 
 ## setup pacman configFiles
-sudo cp -p $HOME/work/configFiles/pacman.conf /etc/pacman.conf
+sudo cp -p "$HOME"/work/configFiles/pacman.conf /etc/pacman.conf
 
 ## setup pacman hook
-sudo cp -p $HOME/work/configFiles/pacmanpkglist.hook /etc/pacman.d/hooks
+sudo cp -p "$HOME"/work/configFiles/pacmanpkglist.hook /etc/pacman.d/hooks
 
 ## sync repository and update packages
 sudo pacman -Syyu
 
 ## setup sysctl config files
-sudo cp -p $HOME/work/configFiles/sysctl.conf /etc/sysctl.conf
-sudo cp -p $HOME/work/configFiles/timesyncd.conf /etc/systemd/timesyncd.conf
-sudo cp -p $HOME/work/configFiles/systemd-timesyncd.service /usr/lib/systemd/system/systemd-timesyncd.service
+sudo cp -p "$HOME"/work/configFiles/sysctl.conf /etc/sysctl.conf
+sudo cp -p "$HOME"/work/configFiles/timesyncd.conf /etc/systemd/timesyncd.conf
+sudo cp -p "$HOME"/work/configFiles/systemd-timesyncd.service /usr/lib/systemd/system/systemd-timesyncd.service
 
 # install packages
 ## install pacman packages
-sudo pacman -S --needed - < $HOME/work/pkglist/pacmanpkglist.txt
+"$HOME/work/pkglist/pacmanpkglist.txt" | sudo pacman -S --needed -
 
 ## install Linuxbrew
 sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
@@ -54,39 +58,36 @@ sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/mas
 ## install Linuxbrew packages
 brew tap arrow2nd/tap
 brew tap goreleaser/tap
-xargs brew install < $HOME/work/pkglist/brewpkglist.txt
+xargs brew install < "$HOME"/work/pkglist/brewpkglist.txt
 
 ## install go packages
-cd
-xargs -I arg go install arg < $HOME/work/pkglist/gopkglist.txt
-cd
+xargs -I arg go install arg < "$HOME"/work/pkglist/gopkglist.txt
 
 ## install GitHub packages
-xargs -I arg ghq get arg < $HOME/work/pkglist/ghpkglist.txt
+xargs -I arg ghq get arg < "$HOME"/work/pkglist/ghpkglist.txt
 
 ### make pacsummary
-cd $HOME/ghq/github.com/sheepla/pacsummary
+cd "$HOME"/ghq/github.com/sheepla/pacsummary || exit
 sudo make install
-which pacsummary | sudo xargs mv -t $HOME/work/bin
+which pacsummary | sudo xargs mv -t "$HOME"/work/bin
 
 ### make AUR package
-cd  $HOME/ghq/aur.archlinux.org/yay
+cd  "$HOME"/ghq/aur.archlinux.org/yay || exit
 makepkg -si
-cd  $HOME/ghq/aur.archlinux.org/paru
+cd  "$HOME"/ghq/aur.archlinux.org/paru || exit
 makepkg -si
-cd  $HOME/ghq/aur.archlinux.org/flutter
+cd  "$HOME"/ghq/aur.archlinux.org/flutter || exit
 makepkg -si
 
 ### link tpm
-cd
-mkdir $HOME/.config/tmux/plugins
-ln -s $HOME/ghq/github.com/tmux-plugins/tpm $HOME/.config/tmux/plugins
+mkdir "$HOME"/.config/tmux/plugins
+ln -s "$HOME"/ghq/github.com/tmux-plugins/tpm "$HOME"/.config/tmux/plugins
 
 ## install cargo
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 ### install cargo packages
-xargs -I arg cargo install arg < $HOME/work/pkglist/cargopkglist.txt
+xargs -I arg cargo install arg < "$HOME"/work/pkglist/cargopkglist.txt
 
 ## install volta
 curl https://get.volta.sh | bash
@@ -98,15 +99,15 @@ volta install node
 volta install npm
 
 ### install npm packages
-xargs -I arg npm install -g arg < $HOME/work/pkglist/npmpkglist.txt
+xargs -I arg npm install -g arg < "$HOME"/work/pkglist/npmpkglist.txt
 
 ## install pip packages
-pip install -r $HOME/work/pkglist/pippkglist.txt
-ln -s $HOME/ghq/github.com/yanosea/yanoDotFiles/.config/pip $HOME/.pip
+pip install -r "$HOME"/work/pkglist/pippkglist.txt
+ln -s "$HOME"/ghq/github.com/yanosea/yanoDotFiles/.config/pip "$HOME"/.pip
 
 # change login shell to zsh
-sudo cp -p $HOME/work/configFiles/zshenv /etc/zsh/zshenv
+sudo cp -p "$HOME"/work/configFiles/zshenv /etc/zsh/zshenv
 chsh -s /usr/sbin/zsh
 
-# DONE!
-echo Done!
+# done!
+echo -e "\e[32;1mdone!\e[m"
