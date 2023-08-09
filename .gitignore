@@ -1,6 +1,5 @@
 # IGNORE FOLDER
 credentials
-dev
 
 # IGNORE FILE
 bin/completion.zsh
