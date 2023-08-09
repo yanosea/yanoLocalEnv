@@ -27,12 +27,15 @@ nghttp2
 portaudio
 pyenv
 rename
+ripgrep
 rust
 sheldon
 speedtest-cli
 tmux
 trash
 wimlib
+yanosea/tap/mindnum
+z
 zoxide
 zsh
 font-gohufont-nerd-font
