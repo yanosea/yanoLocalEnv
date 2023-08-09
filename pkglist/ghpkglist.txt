@@ -7,6 +7,7 @@ github.com/kaz399/spzenhan.vim
 github.com/ryanoasis/nerd-fonts
 github.com/sheepla/pacsummary
 github.com/tmux-plugins/tpm
+github.com/yanosea/homebrew-tap
 github.com/yanosea/mindnum
 github.com/yanosea/yanoDotFiles
 github.com/yanosea/yanoLocalEnv
