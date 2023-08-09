@@ -8,3 +8,5 @@ pnpm
 postcss
 qiita-cli
 tailwindcss
+tree-sitter
+tree-sitter-cli

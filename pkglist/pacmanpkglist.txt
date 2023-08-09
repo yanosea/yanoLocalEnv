@@ -547,6 +547,7 @@ tracker3
 trash-cli
 tree
 tree-sitter
+tree-sitter-cli
 tslib
 ttf-jetbrains-mono
 ttf-roboto
