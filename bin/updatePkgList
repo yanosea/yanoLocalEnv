@@ -27,7 +27,16 @@ for file in ${GOPATH}/bin/*; do
 done
 
 ## Update GitHub Package List
-ghq list > $HOME/work/pkglist/ghpkglist.txt
+rm $HOME/work/pkglist/ghpkglist.txt
+for repo in $(ghq list); do
+    visibility=$(gh repo view "$repo" --json visibility --jq '.visibility' 2>/dev/null)
+    exit_status=$?
+    if [ $exit_status -eq 0 ] && [ "$visibility" == "PUBLIC" ]; then
+        echo $repo >> $HOME/work/pkglist/ghpkglist.txt
+    elif [ $exit_status -eq 1 ]; then
+        echo $repo >> $HOME/work/pkglist/ghpkglist.txt
+    fi
+done
 
 ## Update cargo Package List
 cargo install --list | sed -e 's/ .*//g' | tr -s '\n' > $HOME/work/pkglist/cargopkglist.txt
