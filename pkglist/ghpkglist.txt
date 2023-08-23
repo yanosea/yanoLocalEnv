@@ -4,6 +4,7 @@ aur.archlinux.org/yay
 github.com/astj/ghq-migrator
 github.com/equalsraf/win32yank
 github.com/kaz399/spzenhan.vim
+github.com/lars-berger/GlazeWM
 github.com/ryanoasis/nerd-fonts
 github.com/sheepla/pacsummary
 github.com/tmux-plugins/tpm
