@@ -38,9 +38,13 @@ cairo
 cairomm
 cantarell-fonts
 chrono-date
+clang
+cmake
 colord
+compiler-rt
 containerd
 coreutils
+cppdap
 cppo
 cryptsetup
 curl
@@ -423,6 +427,7 @@ neofetch
 neovim
 nettle
 nghttp2
+ninja
 npth
 nsis
 nspr
@@ -505,6 +510,7 @@ qt5-translations
 qt5-wayland
 rav1e
 readline
+rhash
 ripgrep
 runc
 rust

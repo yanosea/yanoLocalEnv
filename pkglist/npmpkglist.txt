@@ -1,6 +1,7 @@
 @fsouza/prettierd
 astro
 autoprefixer
+expo-cli
 git-split-diffs
 n8n
 npm-check
