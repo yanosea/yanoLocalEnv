@@ -257,6 +257,7 @@ libdaemon
 libdatrie
 libdbusmenu-glib
 libdbusmenu-gtk3
+libdeflate
 libdrm
 libedit
 libelf
