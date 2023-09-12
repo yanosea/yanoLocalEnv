@@ -1,3 +1,4 @@
+abseil-cpp
 accountsservice
 acl
 adobe-source-code-pro-fonts
@@ -218,6 +219,7 @@ jack2
 jansson
 java-environment-common
 java-runtime-common
+jbigkit
 jdk-openjdk
 jemalloc
 jre-openjdk
@@ -471,6 +473,7 @@ polkit
 popt
 portaudio
 procps-ng
+protobuf
 psmisc
 pyenv
 python
