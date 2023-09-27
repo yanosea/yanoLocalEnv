@@ -65,6 +65,8 @@ textual
 toml
 tqdm
 trash-cli
+tree-sitter
+tree-sitter-languages
 typing
 typing_extensions
 uc-micro-py

@@ -71,6 +71,7 @@ efibootmgr
 efivar
 enchant
 expat
+eza
 fakeroot
 fd
 ffmpeg
@@ -161,6 +162,7 @@ haskell-ed25519
 haskell-edit-distance
 haskell-erf
 haskell-fgl
+haskell-foldable1-classes-compat
 haskell-generically
 haskell-ghc-bignum-orphans
 haskell-hackage-security
@@ -439,6 +441,7 @@ ntfs-3g
 ntp
 numactl
 ocl-icd
+onevpl
 oniguruma
 opencore-amr
 openexr
