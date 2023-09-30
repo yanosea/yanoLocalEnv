@@ -71,7 +71,6 @@ efibootmgr
 efivar
 enchant
 expat
-eza
 fakeroot
 fd
 ffmpeg
