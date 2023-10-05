@@ -223,6 +223,7 @@ java-runtime-common
 jbigkit
 jdk-openjdk
 jemalloc
+jq
 jre-openjdk
 jre-openjdk-headless
 json-c
