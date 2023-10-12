@@ -20,7 +20,6 @@ koekeishiya/formulae/skhd
 koekeishiya/formulae/yabai
 lf
 libffi
-libgit2
 libxcb
 llvm
 lsd
