@@ -3,7 +3,11 @@
 echo -e "\e[33;1m
 update cargo Packages!
 \e[m"
-cargo install-update -a
+if [ "$OS" = "Linux" ]; then
+    cargo install-update -a
+elif [ "$OS" = "Darwin" ]; then
+    DYLD_INSERT_LIBRARIES=/opt/homebrew/opt/curl/lib/libcurl.dylib cargo install-update -a
+fi
 
 ## install insufficient cargo packages
 xargs -I arg cargo install arg < "$HOME"/work/pkglist/cargopkglist.txt
