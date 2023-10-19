@@ -1,7 +1,6 @@
 #!/bin/bash
 # setup arch env
-echo -e "\e[36;1msetup arch env!
-\e[m"
+echo -e $'\e[36;1msetup arch env!\e[m'
 
 # install git
 sudo pacman -S Git
@@ -110,4 +109,4 @@ sudo cp -p "$HOME"/work/configFiles/zshenv /etc/zsh/zshenv
 chsh -s /usr/sbin/zsh
 
 # done!
-echo -e "\e[32;1mdone!\e[m"
+echo -e $'\e[32;1mdone!\e[m'

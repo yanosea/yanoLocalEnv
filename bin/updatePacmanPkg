@@ -1,8 +1,9 @@
 #!/bin/bash
+
 # update pacman packages
+echo -e $'\e[33;1mupdate pacman packages!\e[m'
+
 ## sync repository and update packages
-echo -e "\e[33;1mupdate pacman packages!
-\e[m"
 paru -Syyu --noconfirm --skipreview
 
 ## delete cache

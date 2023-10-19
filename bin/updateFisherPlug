@@ -1,8 +1,9 @@
 #!/bin/bash
+
 # update fisher plugins
-echo -e "\e[33;1m
-update fisher plugins!
-\e[m"
+echo -e $'\e[33;1mupdate fisher plugins!\e[m'
+
+# update plugins
 env fish -c "fisher update"
 
 ## install insufficient fisher packages

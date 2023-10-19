@@ -1,15 +1,13 @@
 #!/bin/bash
 # update pkglist
-echo -e "\e[33;1m
-update pkglist!
-\e[m"
+echo -e $'\e[33;1mupdate pkglist!\e[m'
 
-## update Pacman Package List
+## update pacman package list
 if [ "$OS" = "Linux" ]; then
     paru -Qq > "$HOME"/work/pkglist/pacmanpkglist.txt
 fi
 
-## update Brew Package List
+## update brew package list
 if [ "$OS" = "Linux" ]; then
     brew leaves > "$HOME"/work/pkglist/archbrewpkglist.txt
 elif [ "$OS" = "Darwin" ]; then
@@ -17,7 +15,7 @@ elif [ "$OS" = "Darwin" ]; then
     brew list --cask -1 >> "$HOME"/work/pkglist/macbrewpkglist.txt
 fi
 
-## update Go Package List
+## update go package list
 rm "$HOME"/work/pkglist/gopkglist.txt
 for file in "$GOPATH"/bin/*; do
     if [[ -f "$file" ]]; then
@@ -26,7 +24,7 @@ for file in "$GOPATH"/bin/*; do
     fi
 done
 
-## update GitHub Package List
+## update gitHub package List
 rm "$HOME"/work/pkglist/ghpkglist.txt
 for repo in $(ghq list); do
     visibility=$(gh repo view "$repo" --json visibility --jq '.visibility' 2>/dev/null)
@@ -38,11 +36,11 @@ for repo in $(ghq list); do
     fi
 done
 
-## update cargo Package List
+## update cargo package list
 cargo install --list | sed -e 's/ .*//g' | tr -s '\n' > "$HOME"/work/pkglist/cargopkglist.txt
 
-## update npm Package List
+## update npm package list
 volta list all | sed -n 's/^package \(@\{0,1\}[^@]*\).*/\1/p' > "$HOME"/work/pkglist/npmpkglist.txt
 
-## update pip Package List
+## update pip package list
 pip freeze | sed -e 's/==.*//g' > "$HOME"/work/pkglist/pippkglist.txt

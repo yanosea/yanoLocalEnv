@@ -1,8 +1,9 @@
 #!/bin/bash
+
 # update go packages
-echo -e "\e[33;1m
-update go Packages!
-\e[m"
+echo -e $'\e[33;1mupdate go Packages!\e[m'
+
+# update packages
 gup update
 
 ## install insufficient go packages

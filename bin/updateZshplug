@@ -1,8 +1,9 @@
 #!/bin/bash
-# update zsh Plugins
-echo -e "\e[33;1m
-update zsh Plugins!
-\e[m"
+
+# update zsh plugins
+echo -e $'\e[33;1mupdate zsh plugins!\e[m'
+
+# update plugins
 sheldon lock --update
 
 # reload sheldon

@@ -1,9 +1,9 @@
 #!/bin/bash
+
 # update homebrew packages
+echo -e $'\e[33;1mupdate brew Packages!\e[m'
+
 ## update packages
-echo -e "\e[33;1m
-update brew Packages!
-\e[m"
 brew update
 
 ## upgrade packages

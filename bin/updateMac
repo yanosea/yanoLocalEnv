@@ -1,7 +1,7 @@
 #!/bin/bash
+
 # update mac env
-echo -e "\e[36;1mupdate mac env!
-\e[m"
+echo -e $'\e[36;1mupdate mac env!\e[m'
 
 # update homebrew packages
 updateBrewPkg
@@ -31,4 +31,4 @@ updateZshplug
 updatePkgList
 
 # done!
-echo -e "\e[32;1mdone!\e[m"
+echo -e $'\e[32;1mdone!\e[m'

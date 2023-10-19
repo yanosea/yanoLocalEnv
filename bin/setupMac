@@ -1,7 +1,6 @@
 #!/bin/bash
 # setup mac env
-echo -e "\e[36;1msetup mac env!
-\e[m"
+echo -e $'\e[36;1msetup mac env!\e[m'
 
 # install homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -82,4 +81,4 @@ sudo cp -p "$HOME"/work/configFiles/zshenv /etc/zsh/zshenv
 chsh -s /usr/sbin/zsh
 
 # done!
-echo -e "\e[32;1mdone!\e[m"
+echo -e $'\e[32;1mdone!\e[m'
