@@ -48,6 +48,7 @@ ankerwork
 appcleaner
 blender
 chrome-remote-desktop-host
+clipy
 contexts
 coteditor
 daisydisk
