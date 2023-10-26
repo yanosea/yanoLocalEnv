@@ -3,6 +3,7 @@ arrow2nd/tap/nekome
 bat
 cabal-install
 cask
+daipeihust/tap/im-select
 deno
 fish
 fzf
