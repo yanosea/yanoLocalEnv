@@ -626,6 +626,7 @@ xvidcore
 xz
 yay
 zimg
+zip
 zlib
 zoxide
 zsh
