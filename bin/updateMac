@@ -1,34 +1,47 @@
-#!/bin/bash
+#!/opt/homebrew/bin/zsh
+#
+# load function
+. "$HOME/work/bin/askYN.sh"
 
-# update mac env
-echo -e $'\e[36;1mupdate mac env!\e[m'
+# ask update
+if askYN $'\e[32;1mDo you update Mac env?\e[m'; then
 
-# update homebrew packages
-updateBrewPkg
+  # update mac env
+  echo -e $'\e[36;1mupdate mac env!\e[m'
 
-# update go packages
-updateGoPkg
+  # update homebrew packages
+  updateBrewPkg
 
-# update github packages
-updateGitHubPkg
+  # update go packages
+  updateGoPkg
 
-# update cargo packages
-updateCargoPkg
+  # update github packages
+  updateGitHubPkg
 
-# update volta and npm packages
-updateVoltaPkg
+  # update cargo packages
+  updateCargoPkg
 
-# update pip packages
-updatePipPkg
+  # update volta and npm packages
+  updateVoltaPkg
 
-# update fisher plugins
-# updateFisherPlug
+  # update pip packages
+  updatePipPkg
 
-# update zsh plugins
-updateZshplug
+  # update fisher plugins
+  # updateFisherPlug
 
-# update pkglist
-updatePkgList
+  # update zsh plugins
+  updateZshplug
 
-# done!
-echo -e $'\e[32;1mdone!\e[m'
+  # update pkglist
+  updatePkgList
+
+  # done!
+  echo -e $'\e[32;1mdone!\e[m'
+
+else
+
+  # update cancelled
+  echo -e $'\e[32;1mupdate cancelled\e[m'
+
+fi

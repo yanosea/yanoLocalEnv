@@ -1,2 +1,2 @@
-#! /opt/homebrew/bin/zsh
+#!/opt/homebrew/bin/zsh
 nohup /Users/yanosea/.volta/bin/n8n > /dev/null &

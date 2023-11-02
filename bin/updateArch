@@ -1,37 +1,50 @@
 #!/bin/bash
 
-# update arch env
-echo -e $'\e[36;1mupdate arch env!\e[m'
+# load function
+. "$HOME/work/bin/askYN.sh"
 
-# update pacman packages
-updatePacmanPkg
+# ask update
+if askYN $'\e[32;1mDo you update Arch env?\e[m'; then
 
-# update homeBrew packages
-updateBrewPkg
+  # update arch env
+  echo -e $'\e[36;1mupdate arch env!\e[m'
 
-# update go packages
-updateGoPkg
+  # update pacman packages
+  updatePacmanPkg
 
-# update github packages
-updateGitHubPkg
+  # update homeBrew packages
+  updateBrewPkg
 
-# update cargo packages
-updateCargoPkg
+  # update go packages
+  updateGoPkg
 
-# update volta and npm packages
-updateVoltaPkg
+  # update github packages
+  updateGitHubPkg
 
-# update pip packages
-updatePipPkg
+  # update cargo packages
+  updateCargoPkg
 
-# update fisher plugins
-# updateFisherPlug
+  # update volta and npm packages
+  updateVoltaPkg
 
-# update zsh plugins
-updateZshplug
+  # update pip packages
+  updatePipPkg
 
-# update pkglist
-updatePkgList
+  # update fisher plugins
+  # updateFisherPlug
 
-# done!
-echo -e $'\e[32;1mdone!\e[m'
+  # update zsh plugins
+  updateZshplug
+
+  # update pkglist
+  updatePkgList
+
+  # done!
+  echo -e $'\e[32;1mdone!\e[m'
+
+else
+
+  # update cancelled
+  echo -e $'\e[32;1mupdate cancelled\e[m'
+
+fi
