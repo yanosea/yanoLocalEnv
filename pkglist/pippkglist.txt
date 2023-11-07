@@ -1,5 +1,6 @@
 aiohttp
 aiosignal
+annotated-types
 anyio
 async-timeout
 attrs
@@ -15,6 +16,7 @@ colorama
 cryptography
 decorator
 distlib
+distro
 docutils
 face
 filelock
@@ -44,6 +46,8 @@ prompt-toolkit
 psutil
 pyasn1
 pycparser
+pydantic
+pydantic_core
 Pygments
 pyte
 python-dateutil
