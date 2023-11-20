@@ -224,8 +224,6 @@ jbigkit
 jdk-openjdk
 jemalloc
 jq
-jre-openjdk
-jre-openjdk-headless
 json-c
 json-glib
 jsoncpp
@@ -340,6 +338,7 @@ libtheora
 libtiff
 libtirpc
 libtool
+libunibreak
 libunistring
 libunwind
 libusb
