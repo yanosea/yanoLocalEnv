@@ -21,8 +21,10 @@ koekeishiya/formulae/skhd
 koekeishiya/formulae/yabai
 lf
 libffi
+libgit2@1.6
 libxcb
-llvm
+llvm@12
+llvm@16
 lsd
 neovim
 nghttp2
