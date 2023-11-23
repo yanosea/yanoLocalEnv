@@ -260,6 +260,7 @@ libdatrie
 libdbusmenu-glib
 libdbusmenu-gtk3
 libdeflate
+libdisplay-info
 libdrm
 libedit
 libelf
@@ -592,6 +593,7 @@ wezterm-terminfo
 which
 wimlib
 wlroots
+wlroots0.16
 woff2
 wpebackend-fdo
 x264
