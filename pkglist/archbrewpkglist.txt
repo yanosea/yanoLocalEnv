@@ -7,5 +7,4 @@ libevent
 libxcb
 pkg-config
 portaudio
-python@3.11
 yanosea/tap/mindnum
