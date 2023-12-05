@@ -22,11 +22,16 @@ koekeishiya/formulae/yabai
 lf
 libffi
 libgit2@1.6
+libtermkey
+libvterm
 libxcb
 llvm@12
 llvm@16
 lsd
 neovim
+luajit
+luv
+msgpack
 nghttp2
 portaudio
 pyenv
