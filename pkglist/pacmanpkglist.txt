@@ -74,6 +74,7 @@ expat
 fakeroot
 fd
 ffmpeg
+fftw
 file
 filesystem
 findutils
@@ -107,6 +108,7 @@ glib2
 glibc
 glibmm
 glow
+glslang
 glu
 gmp
 gnome-backgrounds
@@ -207,6 +209,7 @@ hidapi
 highway
 http-parser
 hwdata
+hwloc
 hyphen
 iana-etc
 icu
@@ -261,6 +264,7 @@ libdbusmenu-glib
 libdbusmenu-gtk3
 libdeflate
 libdisplay-info
+libdovi
 libdrm
 libedit
 libelf
@@ -311,6 +315,7 @@ libp11-kit
 libpcap
 libpciaccess
 libpipewire
+libplacebo
 libplist
 libpng
 libproxy
@@ -446,6 +451,8 @@ oniguruma
 opencore-amr
 openexr
 openjpeg2
+openmpi
+openpmix
 openssh
 openssl
 openssl-1.1
@@ -519,12 +526,14 @@ rav1e
 readline
 rhash
 ripgrep
+rubberband
 runc
 rust
 scons
 sdl2
 seatd
 sed
+shaderc
 shadow
 shared-mime-info
 sheldon
@@ -532,11 +541,13 @@ shellcheck
 skate
 skim
 slides
+snappy
 sndio
 spdlog
 speedtest-cli
 speex
 speexdsp
+spirv-tools
 sqlite
 srt
 sudo
