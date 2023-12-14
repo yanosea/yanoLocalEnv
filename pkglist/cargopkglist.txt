@@ -1,3 +1,4 @@
 a-gpt
 cargo-update
 spotify-tui
+typos-cli
