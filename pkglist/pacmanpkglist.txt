@@ -20,12 +20,26 @@ autoconf
 automake
 avahi
 awesome-terminal-fonts
+aws-c-auth
+aws-c-cal
+aws-c-common
+aws-c-compression
+aws-c-event-stream
+aws-c-http
+aws-c-io
+aws-c-mqtt
+aws-c-s3
+aws-c-sdkutils
+aws-checksums
 aws-cli
+aws-crt-cpp
+aws-sdk-cpp
 base
 bash
 bat
 binutils
 bison
+boost-libs
 bridge-utils
 brotli
 bubblewrap
@@ -67,6 +81,7 @@ double-conversion
 duktape
 dune
 e2fsprogs
+editline
 efibootmgr
 efivar
 enchant
@@ -257,6 +272,7 @@ libcap
 libcap-ng
 libcloudproviders
 libcolord
+libcpuid
 libcups
 libdaemon
 libdatrie
@@ -330,6 +346,7 @@ libsecret
 libsigc++
 libsm
 libsndfile
+libsodium
 libsoup
 libsoup3
 libsoxr
@@ -407,6 +424,7 @@ linux-firmware-whence
 llvm
 llvm-libs
 lm_sensors
+lowdown
 lsd
 luajit
 lz4
@@ -438,6 +456,8 @@ neovim-nightly-bin
 nettle
 nghttp2
 ninja
+nix
+nix-busybox
 npth
 nsis
 nspr
@@ -529,6 +549,7 @@ ripgrep
 rubberband
 runc
 rust
+s2n-tls
 scons
 sdl2
 seatd
