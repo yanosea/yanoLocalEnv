@@ -6,6 +6,7 @@ async-timeout
 attrs
 awscli
 boltons
+boto3
 botocore
 certifi
 cffi
