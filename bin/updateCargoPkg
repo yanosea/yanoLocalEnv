@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# update rust
+rustup update
+
 # update cargo packages
 echo -e $'\e[33;1mupdate cargo Packages!\e[m'
 
