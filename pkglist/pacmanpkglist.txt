@@ -656,6 +656,7 @@ xorg-xset
 xorg-xwayland
 xorgproto
 xvidcore
+xxhash
 xz
 yay
 zimg
