@@ -375,6 +375,7 @@ libvarlink
 libvdpau
 libverto
 libvorbis
+libvpl
 libvpx
 libvterm
 libwacom
@@ -468,7 +469,6 @@ ntfs-3g
 ntp
 numactl
 ocl-icd
-onevpl
 oniguruma
 opencore-amr
 openexr
