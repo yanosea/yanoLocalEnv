@@ -3,6 +3,7 @@ credentials
 
 # IGNORE FILE
 bin/completion.zsh
+bin/era
 bin/key-bindings.zsh
 bin/pacsummary
 bin/spotify-tui

@@ -642,6 +642,7 @@ xcb-util-wm
 xdg-dbus-proxy
 xdg-utils
 xf86-input-libinput
+xh
 xkeyboard-config
 xorg-fonts-encodings
 xorg-server
