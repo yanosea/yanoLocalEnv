@@ -14,4 +14,4 @@ elif [ "$OS" = "Darwin" ]; then
 fi
 
 ## install insufficient cargo packages
-xargs -I arg cargo install arg < "$HOME"/work/pkglist/cargopkglist.txt
+xargs -I arg cargo install arg < "$WORKSPACE"/pkglist/cargopkglist.txt

@@ -1,7 +1,7 @@
 #!/opt/homebrew/bin/zsh
 #
 # load function
-. "$HOME/work/bin/askYN.sh"
+. "$WORKSPACE/bin/askYN.sh"
 
 # ask update
 if askYN $'\e[32;1mDo you update Mac env?\e[m'; then

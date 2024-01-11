@@ -7,4 +7,4 @@ echo -e $'\e[33;1mupdate pip Packages!\e[m'
 pip-review --auto
 
 ## install insufficient pip packages
-pip install -r "$HOME"/work/pkglist/pippkglist.txt
+pip install -r "$WORKSPACE"/pkglist/pippkglist.txt

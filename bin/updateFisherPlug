@@ -7,7 +7,7 @@ echo -e $'\e[33;1mupdate fisher plugins!\e[m'
 env fish -c "fisher update"
 
 ## install insufficient fisher packages
-env fish -c "fisher install < $HOME/work/pkglist/fisherpkglist.txt"
+env fish -c "fisher install < $WORKSPACE/pkglist/fisherpkglist.txt"
 
 ## switch theme to bobthefish
 env fish -c "fisher install oh-my-fish/theme-bobthefish"

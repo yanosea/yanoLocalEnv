@@ -11,45 +11,41 @@ mkdir -p "$HOME"/ghq/github.com/yanosea
 # clone yanoLocalEnv
 git clone https://github.com/yanosea/yanoLocalEnv.git "$HOME"/ghq/github.com/yanosea
 
-# link yanoLocalEnv
-ln -s "$HOME"/ghq/github.com/yanosea/yanoLocalEnv "$HOME"/work/
-
 # clone yanoDotFiles
 git clone https://github.com/yanosea/yanoDotFiles.git "$HOME"/ghq/github.com/yanosea
 
 # link yanoDotFile
-ln -s "$HOME"/ghq/github.com/yanosea/yanoDotFiles "$HOME"/dotfiles/
 ln -s "$HOME"/ghq/github.com/yanosea/yanoDotFiles/.config "$HOME"/.config/
 ln -s "$HOME"/ghq/github.com/yanosea/yanoDotFiles/.vim "$HOME"/.vim/
 ln -s "$HOME"/ghq/github.com/yanosea/yanoDotFiles/.wanna "$HOME"/.wanna/
 
 # make XDG directories
-sudo cp -p "$HOME"/work/configFiles/xdgenv.sh /etc/profile.d/xdgenv.sh
+sudo cp -p "$WORKSPACE"/configFiles/xdgenv.sh /etc/profile.d/xdgenv.sh
 mkdir -p "$HOME"/.cache
 mkdir -p "$HOME"/.local/share
 mkdir -p "$HOME"/.local/state
 
 # setting
 ## optimize pacman mirror server
-sudo cp -p "$HOME"/work/configFiles/mirrorlist /etc/pacman.d/mirrorlist
+sudo cp -p "$WORKSPACE"/configFiles/mirrorlist /etc/pacman.d/mirrorlist
 
 ## setup pacman configFiles
-sudo cp -p "$HOME"/work/configFiles/pacman.conf /etc/pacman.conf
+sudo cp -p "$WORKSPACE"/configFiles/pacman.conf /etc/pacman.conf
 
 ## setup pacman hook
-sudo cp -p "$HOME"/work/configFiles/pacmanpkglist.hook /etc/pacman.d/hooks
+sudo cp -p "$WORKSPACE"/configFiles/pacmanpkglist.hook /etc/pacman.d/hooks
 
 ## sync repository and update packages
 sudo pacman -Syyu
 
 ## setup sysctl config files
-sudo cp -p "$HOME"/work/configFiles/sysctl.conf /etc/sysctl.conf
-sudo cp -p "$HOME"/work/configFiles/timesyncd.conf /etc/systemd/timesyncd.conf
-sudo cp -p "$HOME"/work/configFiles/systemd-timesyncd.service /usr/lib/systemd/system/systemd-timesyncd.service
+sudo cp -p "$WORKSPACE"/configFiles/sysctl.conf /etc/sysctl.conf
+sudo cp -p "$WORKSPACE"/configFiles/timesyncd.conf /etc/systemd/timesyncd.conf
+sudo cp -p "$WORKSPACE"/configFiles/systemd-timesyncd.service /usr/lib/systemd/system/systemd-timesyncd.service
 
 # install packages
 ## install pacman packages
-"$HOME/work/pkglist/pacmanpkglist.txt" | sudo pacman -S --needed -
+"$WORKSPACE/pkglist/pacmanpkglist.txt" | sudo pacman -S --needed -
 
 ## install Linuxbrew
 sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
@@ -57,18 +53,23 @@ sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/mas
 ## install Linuxbrew packages
 brew tap arrow2nd/tap
 brew tap goreleaser/tap
-xargs brew install < "$HOME"/work/pkglist/brewpkglist.txt
+xargs brew install < "$WORKSPACE"/pkglist/brewpkglist.txt
 
 ## install go packages
-xargs -I arg go install arg < "$HOME"/work/pkglist/gopkglist.txt
+xargs -I arg go install arg < "$WORKSPACE"/pkglist/gopkglist.txt
 
 ## install GitHub packages
-xargs -I arg ghq get arg < "$HOME"/work/pkglist/ghpkglist.txt
+xargs -I arg ghq get arg < "$WORKSPACE"/pkglist/ghpkglist.txt
 
 ### make pacsummary
 cd "$HOME"/ghq/github.com/sheepla/pacsummary || exit
 sudo make install
-which pacsummary | sudo xargs mv -t "$HOME"/work/bin
+which pacsummary | sudo xargs mv -t "$HOME"/.local/bin
+
+### make era
+cd "$HOME"/ghq/github.com/kyoheiu/era || exit
+sudo make install
+which era | sudo xargs mv -t "$HOME"/.local/bin
 
 ### make AUR package
 cd  "$HOME"/ghq/aur.archlinux.org/yay || exit
@@ -78,15 +79,11 @@ makepkg -si
 cd  "$HOME"/ghq/aur.archlinux.org/flutter || exit
 makepkg -si
 
-### link tpm
-mkdir "$HOME"/.config/tmux/plugins
-ln -s "$HOME"/ghq/github.com/tmux-plugins/tpm "$HOME"/.config/tmux/plugins
-
 ## install cargo
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 ### install cargo packages
-xargs -I arg cargo install arg < "$HOME"/work/pkglist/cargopkglist.txt
+xargs -I arg cargo install arg < "$WORKSPACE"/pkglist/cargopkglist.txt
 
 ## install volta
 curl https://get.volta.sh | bash
@@ -98,14 +95,14 @@ volta install node
 volta install npm
 
 ### install npm packages
-xargs -I arg npm install -g arg < "$HOME"/work/pkglist/npmpkglist.txt
+xargs -I arg npm install -g arg < "$WORKSPACE"/pkglist/npmpkglist.txt
 
 ## install pip packages
-pip install -r "$HOME"/work/pkglist/pippkglist.txt
+pip install -r "$WORKSPACE"/pkglist/pippkglist.txt
 ln -s "$HOME"/ghq/github.com/yanosea/yanoDotFiles/.config/pip "$HOME"/.pip
 
 # change login shell to zsh
-sudo cp -p "$HOME"/work/configFiles/zshenv /etc/zsh/zshenv
+sudo cp -p "$WORKSPACE"/configFiles/zshenv /etc/zsh/zshenv
 chsh -s /usr/sbin/zsh
 
 # done!

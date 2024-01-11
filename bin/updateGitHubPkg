@@ -7,4 +7,4 @@ echo -e $'\e[33;1mupdate github Packages!\e[m'
 ghq list | ghq get --update
 
 ## install insufficient github packages
-xargs -I arg ghq get arg < "$HOME"/work/pkglist/ghpkglist.txt
+xargs -I arg ghq get arg < "$WORKSPACE"/pkglist/ghpkglist.txt

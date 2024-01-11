@@ -14,9 +14,9 @@ brew cleanup
 
 ## install insufficient brew packages
 if [ "$OS" = "Linux" ]; then
-    xargs brew install < "$HOME"/work/pkglist/archbrewpkglist.txt
+    xargs brew install < "$WORKSPACE"/pkglist/archbrewpkglist.txt
 elif [ "$OS" = "Darwin" ]; then
-    xargs brew install < "$HOME"/work/pkglist/macbrewpkglist.txt
+    xargs brew install < "$WORKSPACE"/pkglist/macbrewpkglist.txt
 fi
 
 ## check health

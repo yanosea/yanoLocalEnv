@@ -7,4 +7,4 @@ echo -e $'\e[33;1mupdate go Packages!\e[m'
 gup update
 
 ## install insufficient go packages
-xargs -I arg go install arg < "$HOME"/work/pkglist/gopkglist.txt
+xargs -I arg go install arg < "$WORKSPACE"/pkglist/gopkglist.txt

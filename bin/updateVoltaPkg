@@ -13,4 +13,4 @@ echo -e $'\e[33;1mupdate npm Packages!\e[m'
 npm-check -u -g
 
 ## install insufficient npm packages
-xargs -I arg npm install -g arg < "$HOME"/work/pkglist/npmpkglist.txt
+xargs -I arg npm install -g arg < "$WORKSPACE"/pkglist/npmpkglist.txt

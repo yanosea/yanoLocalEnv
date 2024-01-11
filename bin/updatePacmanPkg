@@ -10,4 +10,4 @@ paru -Syyu --noconfirm --skipreview
 paru -Scc --noconfirm --skipreview
 
 ## install insufficient pacman packages
-paru -S --needed --noconfirm --skipreview - < "$HOME"/work/pkglist/pacmanpkglist.txt
+paru -S --needed --noconfirm --skipreview - < "$WORKSPACE"/pkglist/pacmanpkglist.txt
