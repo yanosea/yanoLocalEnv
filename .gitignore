@@ -1,14 +1,5 @@
-# IGNORE FOLDER
-credentials
+# ignore folders
 
-# IGNORE FILE
-bin/completion.zsh
-bin/era
-bin/key-bindings.zsh
-bin/pacsummary
-bin/spotify-tui
-bin/spzenhan.exe
-bin/traceconv
-bin/win32yank.exe
+# ignore files
 .DS_Store
 *.log
