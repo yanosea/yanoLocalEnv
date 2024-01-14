@@ -1,4 +1,5 @@
 # ignore folders
+bin/yanoXserver
 
 # ignore files
 .DS_Store
