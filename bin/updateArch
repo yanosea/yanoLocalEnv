@@ -21,6 +21,9 @@ if askYN $'\e[32;1mDo you update Arch env?\e[m'; then
   # update github packages
   updateGitHubPkg
 
+  # update gh extensions
+  updateGhExtension
+
   # update cargo packages
   updateCargoPkg
 

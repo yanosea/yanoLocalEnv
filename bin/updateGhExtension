@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# update gh extensions
+echo -e $'\e[33;1mupdate gh Extensions!\e[m'
+
+# update extensions
+gh extension upgrade --all
+
+## install insufficient gh extensions
+xargs -I arg gh extension install arg < "$WORKSPACE"/pkglist/ghextensionlist.txt
