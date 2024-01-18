@@ -1,0 +1,1 @@
+wsl -d Arch --cd ~
