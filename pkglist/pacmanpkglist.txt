@@ -624,6 +624,7 @@ weston
 wezterm
 wezterm-shell-integration
 wezterm-terminfo
+wget
 which
 wimlib
 wlroots
