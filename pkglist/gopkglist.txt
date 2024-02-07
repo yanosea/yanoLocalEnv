@@ -7,6 +7,7 @@ golang.org/x/tools/gopls@latest
 github.com/cweill/gotests/gotests@latest
 github.com/nao1215/gup@latest
 github.com/sheepla/longgopher@latest
+go.uber.org/mock/mockgen@latest
 github.com/sheepla/og@latest
 github.com/sheepla/pingu@latest
 github.com/wailsapp/wails/v2/cmd/wails@latest
