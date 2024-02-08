@@ -1,4 +1,5 @@
 @fsouza/prettierd
+@marp-team/marp-cli
 astro
 autoprefixer
 expo-cli
