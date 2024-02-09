@@ -4,7 +4,6 @@ astro
 autoprefixer
 expo-cli
 git-split-diffs
-n8n
 npm-check
 pnpm
 postcss
