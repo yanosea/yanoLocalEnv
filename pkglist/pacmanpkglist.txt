@@ -609,6 +609,7 @@ usbmuxd
 util-linux
 util-linux-libs
 v4l-utils
+vapoursynth
 vhs
 vi
 vid.stab
