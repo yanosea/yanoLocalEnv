@@ -290,6 +290,7 @@ libepoxy
 libev
 libevdev
 libevent
+libfabric
 libffi
 libfontenc
 libgcrypt
