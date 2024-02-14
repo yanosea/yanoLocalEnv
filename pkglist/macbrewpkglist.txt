@@ -72,6 +72,8 @@ google-drive
 hammerspoon
 hiddenbar
 launchpad-manager
+libreoffice
+libreoffice-language-pack
 menubar-stats
 mono-mdk-for-visual-studio
 neovim-nightly
