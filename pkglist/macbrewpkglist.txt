@@ -19,6 +19,7 @@ haskell-stack
 icu4c
 koekeishiya/formulae/skhd
 koekeishiya/formulae/yabai
+lazygit
 lf
 libffi
 libgit2@1.6
