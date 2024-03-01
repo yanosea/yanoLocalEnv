@@ -85,6 +85,7 @@ parallels
 processing
 qmk-toolbox
 sonic-pi
+splashtop-personal
 splice
 spotify
 supercollider
