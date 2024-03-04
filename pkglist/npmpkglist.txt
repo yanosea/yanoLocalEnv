@@ -7,6 +7,8 @@ git-split-diffs
 npm-check
 pnpm
 postcss
+prettier
+prettier-plugin-astro
 qiita-cli
 tailwindcss
 tree-sitter
