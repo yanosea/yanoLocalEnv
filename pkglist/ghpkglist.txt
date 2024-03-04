@@ -11,6 +11,7 @@ github.com/sheepla/pacsummary
 github.com/tmux-plugins/tpm
 github.com/yanosea/homebrew-tap
 github.com/yanosea/mindnum
+github.com/yanosea/rep
 github.com/yanosea/spotlike
 github.com/yanosea/yanoDotFiles
 github.com/yanosea/yanoLocalEnv
