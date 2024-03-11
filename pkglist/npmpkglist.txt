@@ -1,5 +1,6 @@
 @fsouza/prettierd
 @marp-team/marp-cli
+aicommits
 astro
 autoprefixer
 expo-cli
