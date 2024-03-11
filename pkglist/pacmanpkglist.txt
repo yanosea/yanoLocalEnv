@@ -79,6 +79,7 @@ device-mapper
 diffutils
 dnssec-anchors
 docker
+docker-compose
 double-conversion
 duktape
 dune
@@ -345,6 +346,7 @@ libraw1394
 librsvg
 libsamplerate
 libsasl
+libscfg
 libseccomp
 libsecret
 libsigc++

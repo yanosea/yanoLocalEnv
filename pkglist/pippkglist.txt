@@ -29,7 +29,7 @@ httpcore
 httpx
 i3ipc
 idna
-importlib-metadata
+importlib_metadata
 jmespath
 linkify-it-py
 lit
