@@ -472,6 +472,7 @@ nss
 ntfs-3g
 ntp
 numactl
+oatmeal-bin
 ocl-icd
 oniguruma
 opencore-amr
