@@ -35,6 +35,7 @@ aws-cli
 aws-crt-cpp
 aws-sdk-cpp
 base
+base-devel
 bash
 bat
 binutils
@@ -494,7 +495,6 @@ pam
 pambase
 pango
 pangomm
-paru
 patch
 pciutils
 pcre
@@ -671,6 +671,7 @@ xvidcore
 xxhash
 xz
 yay
+yay-debug
 zimg
 zip
 zlib

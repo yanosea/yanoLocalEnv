@@ -4,10 +4,10 @@
 echo -e $'\e[33;1mupdate pacman packages!\e[m'
 
 ## sync repository and update packages
-paru -Syyu --noconfirm --skipreview
+yay -Syyu --noconfirm
 
 ## delete cache
-paru -Scc --noconfirm --skipreview
+yay -Scc --noconfirm
 
 ## install insufficient pacman packages
-paru -S --needed --noconfirm --skipreview - < "$WORKSPACE"/pkglist/pacmanpkglist.txt
+yay -S --needed --noconfirm - < "$WORKSPACE"/pkglist/pacmanpkglist.txt
