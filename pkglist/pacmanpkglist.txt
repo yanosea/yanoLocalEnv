@@ -474,6 +474,7 @@ ntfs-3g
 ntp
 numactl
 oatmeal-bin
+oatmeal-bin-debug
 ocl-icd
 oniguruma
 opencore-amr
