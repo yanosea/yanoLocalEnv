@@ -15,4 +15,5 @@ github.com/yanosea/spotlike
 github.com/yanosea/yanoDotFiles
 github.com/yanosea/yanoLocalEnv
 github.com/yanosea/yanoPortfolio
+github.com/yanosea/yanoPortfolioBlogComments
 github.com/yanosea/yanoseaNowPlaying
