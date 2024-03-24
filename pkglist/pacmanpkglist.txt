@@ -287,6 +287,7 @@ libdisplay-info
 libdovi
 libdrm
 libedit
+libei
 libelf
 libepoxy
 libev
