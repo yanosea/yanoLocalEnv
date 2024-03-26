@@ -101,6 +101,14 @@ fish
 flac
 flex
 flutter
+flutter-common
+flutter-debug
+flutter-devel
+flutter-intellij-patch
+flutter-target-android
+flutter-target-linux
+flutter-target-web
+flutter-tool
 fmt
 fontconfig
 freetype2
@@ -138,6 +146,7 @@ go
 gperftools
 gpgme
 gpm
+gradle
 graphite
 grep
 groff
