@@ -23,7 +23,6 @@ face
 filelock
 frogmouth
 frozenlist
-glom
 h11
 httpcore
 httpx
@@ -37,7 +36,6 @@ markdown-it-py
 mdit-py-plugins
 mdurl
 multidict
-openai
 packaging
 pip-review
 pipenv
@@ -55,7 +53,6 @@ python-dateutil
 python-dotenv
 python-xlib
 PyYAML
-questionary
 requests
 rfc3986
 rich
@@ -78,8 +75,8 @@ uc-micro-py
 urllib3
 virtualenv
 virtualenv-clone
-wanna
 wcwidth
 xdg
+xdg-base-dirs
 yarl
 zipp

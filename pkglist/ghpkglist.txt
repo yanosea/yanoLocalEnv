@@ -1,4 +1,3 @@
-aur.archlinux.org/flutter
 aur.archlinux.org/yay
 github.com/astj/ghq-migrator
 github.com/equalsraf/win32yank

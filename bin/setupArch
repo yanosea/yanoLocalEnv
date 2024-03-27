@@ -17,7 +17,6 @@ git clone https://github.com/yanosea/yanoDotFiles.git "$HOME"/ghq/github.com/yan
 # link yanoDotFile
 ln -s "$HOME"/ghq/github.com/yanosea/yanoDotFiles/.config "$HOME"/.config/
 ln -s "$HOME"/ghq/github.com/yanosea/yanoDotFiles/.vim "$HOME"/.vim/
-ln -s "$HOME"/ghq/github.com/yanosea/yanoDotFiles/.wanna "$HOME"/.wanna/
 
 # make XDG directories
 sudo cp -p "$WORKSPACE"/configFiles/xdgenv.sh /etc/profile.d/xdgenv.sh
