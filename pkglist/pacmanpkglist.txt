@@ -13,7 +13,6 @@ arch-install-scripts
 archlinux-keyring
 argon2
 at-spi2-core
-atkmm
 attr
 audit
 autoconf
@@ -31,7 +30,6 @@ aws-c-mqtt
 aws-c-s3
 aws-c-sdkutils
 aws-checksums
-aws-cli
 aws-crt-cpp
 aws-sdk-cpp
 base
@@ -51,7 +49,6 @@ ca-certificates-mozilla
 ca-certificates-utils
 cabal-install
 cairo
-cairomm
 cantarell-fonts
 chrono-date
 clang
@@ -64,7 +61,6 @@ cppdap
 cppo
 cryptsetup
 curl
-dart
 dav1d
 db
 db5.3
@@ -100,7 +96,6 @@ findutils
 fish
 flac
 flex
-fmt
 fontconfig
 freetype2
 fribidi
@@ -125,7 +120,6 @@ github-cli
 glib-networking
 glib2
 glibc
-glibmm
 glow
 glslang
 glu
@@ -148,10 +142,7 @@ gssdp
 gst-plugins-bad-libs
 gst-plugins-base-libs
 gstreamer
-gtk-layer-shell
 gtk-update-icon-cache
-gtk3
-gtkmm3
 guile
 gum
 gupnp
@@ -261,7 +252,6 @@ lcms2
 ldns
 less
 lf
-libappindicator-gtk3
 libarchive
 libass
 libassuan
@@ -271,7 +261,6 @@ libavif
 libbluray
 libbpf
 libbs2b
-libbsd
 libcap
 libcap-ng
 libcloudproviders
@@ -280,8 +269,6 @@ libcpuid
 libcups
 libdaemon
 libdatrie
-libdbusmenu-glib
-libdbusmenu-gtk3
 libdeflate
 libdisplay-info
 libdovi
@@ -305,8 +292,6 @@ libgusb
 libice
 libidn2
 libiec61883
-libimobiledevice
-libindicator-gtk3
 libinput
 libisl
 libjpeg-turbo
@@ -320,7 +305,6 @@ libmfx
 libmnl
 libmodplug
 libmpc
-libmpdclient
 libnet
 libnetfilter_conntrack
 libnfnetlink
@@ -337,9 +321,7 @@ libopenmpt
 libp11-kit
 libpcap
 libpciaccess
-libpipewire
 libplacebo
-libplist
 libpng
 libproxy
 libpsl
@@ -351,7 +333,6 @@ libsasl
 libscfg
 libseccomp
 libsecret
-libsigc++
 libsm
 libsndfile
 libsodium
@@ -373,7 +354,6 @@ libunibreak
 libunistring
 libunwind
 libusb
-libusbmuxd
 libutempter
 libuv
 libva
@@ -387,7 +367,6 @@ libvterm
 libwacom
 libwebp
 libwebsockets
-libwireplumber
 libwpe
 libx11
 libxau
@@ -423,9 +402,6 @@ libyaml
 libyuv
 licenses
 lightdm
-lightdm-gtk-greeter
-lightdm-webkit-theme-litarvan
-lightdm-webkit2-greeter
 linux
 linux-api-headers
 linux-firmware
@@ -463,7 +439,6 @@ neatvnc
 neofetch
 neovim-nightly-bin
 nettle
-nghttp2
 ninja
 nix
 nix-busybox
@@ -496,7 +471,6 @@ pacman-mirrorlist
 pam
 pambase
 pango
-pangomm
 patch
 pciutils
 pcre
@@ -508,7 +482,6 @@ perl-timedate
 pinentry
 pixman
 pkgconf
-playerctl
 polkit
 popt
 portaudio
@@ -519,50 +492,24 @@ psmisc
 pyenv
 python
 python-anyio
-python-attrs
-python-botocore
 python-certifi
-python-cffi
 python-colorama
-python-cryptography
-python-dateutil
-python-decorator
-python-distlib
-python-docutils
-python-filelock
 python-h11
 python-httpcore
 python-httpx
 python-idna
-python-jmespath
 python-linkify-it-py
 python-markdown-it-py
 python-mdurl
-python-packaging
-python-pip
-python-pipenv
-python-platformdirs
-python-ply
 python-psutil
-python-pyasn1
-python-pycparser
 python-pygments
-python-pyte
 python-rich
-python-rsa
-python-s3transfer
 python-six
 python-sniffio
 python-textual
 python-typing_extensions
 python-uc-micro-py
-python-urllib3
-python-virtualenv
-python-virtualenv-clone
-python-wcwidth
-python-wheel
 python-xdg-base-dirs
-python-yaml
 qt5-base
 qt5-declarative
 qt5-translations
@@ -575,7 +522,6 @@ rubberband
 runc
 rust
 s2n-tls
-scons
 sdl2
 seatd
 sed
@@ -588,9 +534,6 @@ skate
 skim
 slides
 snappy
-sndio
-spdlog
-speedtest-cli
 speex
 speexdsp
 spirv-tools
@@ -613,7 +556,6 @@ tig
 tk
 tmux
 tpm2-tss
-tracker3
 trash-cli
 tree
 tree-sitter
@@ -625,8 +567,6 @@ ttyd
 tzdata
 unibilium
 unzip
-upower
-usbmuxd
 util-linux
 util-linux-libs
 v4l-utils
@@ -638,11 +578,9 @@ vim
 vim-runtime
 vmaf
 vulkan-icd-loader
-waybar
 wayland
 wayland-protocols
 wayvnc
-webkit2gtk
 webp-pixbuf-loader
 weston
 wezterm

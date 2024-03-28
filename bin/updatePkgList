@@ -44,6 +44,3 @@ cargo install --list | sed -e 's/ .*//g' | tr -s '\n' > "$WORKSPACE"/pkglist/car
 
 ## update npm package list
 volta list all | sed -n 's/^package \(@\{0,1\}[^@]*\).*/\1/p' > "$WORKSPACE"/pkglist/npmpkglist.txt
-
-## update pip package list
-pip freeze | sed -e 's/==.*//g' > "$WORKSPACE"/pkglist/pippkglist.txt
