@@ -1,6 +1,9 @@
+a-gpt-git
+a-gpt-git-debug
 abseil-cpp
 accountsservice
 acl
+actionlint
 adobe-source-code-pro-fonts
 adwaita-cursors
 adwaita-icon-theme
@@ -50,6 +53,7 @@ ca-certificates-utils
 cabal-install
 cairo
 cantarell-fonts
+cargo-update
 chrono-date
 clang
 cmake
@@ -70,6 +74,7 @@ dbus-broker-units
 dconf
 debugedit
 default-cursors
+delve
 deno
 desktop-file-utils
 device-mapper
@@ -110,6 +115,7 @@ gcc
 gcc-libs
 gdbm
 gdk-pixbuf2
+genact
 gettext
 ghc-libs
 giflib
@@ -129,6 +135,9 @@ gnu-free-fonts
 gnupg
 gnutls
 go
+gopls
+gotests
+gotests-debug
 gperftools
 gpgme
 gpm
@@ -311,6 +320,7 @@ libnfnetlink
 libnftnl
 libnghttp2
 libnghttp3
+libngtcp2
 libnice
 libnl
 libnotify
@@ -428,6 +438,8 @@ mingw-w64-winpthreads
 mingw-w64-zlib
 mkinitcpio
 mkinitcpio-busybox
+mockgen
+mockgen-debug
 mods
 mpfr
 mpg123
@@ -480,6 +492,8 @@ perl-error
 perl-mailtools
 perl-timedate
 pinentry
+pingu
+pingu-debug
 pixman
 pkgconf
 polkit
@@ -537,6 +551,8 @@ snappy
 speex
 speexdsp
 spirv-tools
+spotify-tui
+spotify-tui-debug
 sqlite
 srt
 sudo
@@ -564,6 +580,7 @@ tslib
 ttf-jetbrains-mono
 ttf-roboto
 ttyd
+typos
 tzdata
 unibilium
 unzip
@@ -578,6 +595,8 @@ vim
 vim-runtime
 vmaf
 vulkan-icd-loader
+wails
+wails-debug
 wayland
 wayland-protocols
 wayvnc

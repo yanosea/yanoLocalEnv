@@ -1,5 +1,0 @@
-a-gpt
-cargo-update
-genact
-spotify-tui
-typos-cli

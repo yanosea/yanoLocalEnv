@@ -1,8 +1,4 @@
 arrow2nd/tap/gomi-rename
 arrow2nd/tap/nekome
 ghq
-golangci-lint
-libevent
-libxcb
-pkg-config
 yanosea/tap/mindnum

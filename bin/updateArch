@@ -24,17 +24,8 @@ if askYN $'\e[32;1mDo you update Arch env?\e[m'; then
   # update gh extensions
   updateGhExtension
 
-  # update cargo packages
-  updateCargoPkg
-
   # update volta and npm packages
   updateVoltaPkg
-
-  # update pip packages
-  updatePipPkg
-
-  # update fisher plugins
-  # updateFisherPlug
 
   # update zsh plugins
   updateZshplug

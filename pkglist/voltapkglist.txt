@@ -1,0 +1,5 @@
+@marp-team/marp-cli
+aicommits
+git-split-diffs
+pnpm
+qiita-cli
