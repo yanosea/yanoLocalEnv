@@ -118,6 +118,8 @@ gdk-pixbuf2
 genact
 gettext
 ghc-libs
+ghq
+ghq-debug
 giflib
 git
 git-delta
@@ -428,6 +430,7 @@ m4
 mailcap
 make
 mako
+marp-cli
 md4c
 mesa
 mingw-w64-binutils
@@ -454,6 +457,7 @@ nettle
 ninja
 nix
 nix-busybox
+nodejs-git-split-diffs
 npth
 nsis
 nspr

@@ -39,8 +39,5 @@ done
 ## update gh extension list
 gh extension list | sed -n 's/^[^\t]*\t\([^\t]*\)\t.*/\1/p' > "$WORKSPACE"/pkglist/ghextensionlist.txt
 
-## update cargo package list
-cargo install --list | sed -e 's/ .*//g' | tr -s '\n' > "$WORKSPACE"/pkglist/cargopkglist.txt
-
 ## update volta package list
 volta list all | sed -n 's/^package \(@\{0,1\}[^@]*\).*/\1/p' > "$WORKSPACE"/pkglist/voltapkglist.txt
