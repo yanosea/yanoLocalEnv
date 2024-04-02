@@ -137,7 +137,6 @@ gnu-free-fonts
 gnupg
 gnutls
 go
-gopls
 gotests
 gotests-debug
 gperftools
