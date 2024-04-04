@@ -246,6 +246,8 @@ java-runtime-common
 jbigkit
 jdk-openjdk
 jemalloc
+jnv
+jnv-debug
 jq
 json-c
 json-glib
