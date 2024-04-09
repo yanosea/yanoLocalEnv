@@ -457,7 +457,7 @@ nano
 ncurses
 neatvnc
 neofetch
-neovim-nightly-bin
+neovim
 nettle
 ninja
 nix
@@ -586,7 +586,14 @@ tracker3
 trash-cli
 tree
 tree-sitter
+tree-sitter-bash
+tree-sitter-c
 tree-sitter-cli
+tree-sitter-lua
+tree-sitter-markdown
+tree-sitter-python
+tree-sitter-query
+tree-sitter-vimdoc
 tslib
 ttf-jetbrains-mono
 ttf-roboto
