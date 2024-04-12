@@ -41,7 +41,6 @@ bash
 bat
 binutils
 bison
-bitwarden-cli
 boost-libs
 bridge-utils
 brotli
