@@ -1,4 +1,3 @@
-@bitwarden/cli
 aicommits
 pnpm
 qiita-cli

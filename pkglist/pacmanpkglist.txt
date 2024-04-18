@@ -539,6 +539,7 @@ qt5-declarative
 qt5-translations
 qt5-wayland
 rav1e
+rbw
 readline
 rhash
 ripgrep
