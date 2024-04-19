@@ -123,6 +123,8 @@ ghq
 ghq-debug
 giflib
 git
+git-credential-oauth
+git-credential-oauth-debug
 git-delta
 git-lfs
 github-cli
