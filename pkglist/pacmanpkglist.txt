@@ -44,6 +44,7 @@ bison
 boost-libs
 bridge-utils
 brotli
+browsh
 bubblewrap
 bzip2
 c-ares
@@ -98,6 +99,7 @@ fftw
 file
 filesystem
 findutils
+firefox
 fish
 flac
 flex
@@ -616,6 +618,7 @@ vim
 vim-runtime
 vmaf
 vulkan-icd-loader
+w3m
 wails
 wails-debug
 wayland
