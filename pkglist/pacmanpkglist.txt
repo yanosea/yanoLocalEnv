@@ -509,6 +509,7 @@ pingu
 pingu-debug
 pixman
 pkgconf
+poketex
 polkit
 popt
 portaudio
