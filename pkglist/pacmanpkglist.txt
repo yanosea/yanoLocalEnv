@@ -453,6 +453,7 @@ mkinitcpio-busybox
 mockgen
 mockgen-debug
 mods
+mpdecimal
 mpfr
 mpg123
 msgpack-c
