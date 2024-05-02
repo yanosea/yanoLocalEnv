@@ -1,3 +1,4 @@
+@microsoft/inshellisense
 aicommits
 pnpm
 qiita-cli
