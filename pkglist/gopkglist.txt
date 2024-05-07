@@ -5,3 +5,4 @@ github.com/nao1215/gup@latest
 github.com/arrow2nd/jisyo@latest
 github.com/sheepla/longgopher@latest
 github.com/sheepla/og@latest
+github.com/giannimassi/trello-tui@latest
