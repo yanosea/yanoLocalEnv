@@ -2,3 +2,4 @@
 aicommits
 pnpm
 qiita-cli
+typescript
