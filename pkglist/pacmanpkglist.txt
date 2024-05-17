@@ -573,6 +573,7 @@ spotify-tui
 spotify-tui-debug
 sqlite
 srt
+starship
 sudo
 svt-av1
 sway
