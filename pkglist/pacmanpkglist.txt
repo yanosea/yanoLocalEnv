@@ -565,6 +565,7 @@ sheldon
 shellcheck
 skate
 skim
+sl
 slides
 snappy
 speex
