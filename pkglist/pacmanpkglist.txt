@@ -62,6 +62,7 @@ colord
 compiler-rt
 containerd
 coreutils
+cowsay
 cppdap
 cppo
 cryptsetup
