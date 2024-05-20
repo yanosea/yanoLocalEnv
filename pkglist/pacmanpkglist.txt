@@ -433,6 +433,8 @@ llvm-libs
 lm_sensors
 lowdown
 lsd
+lua51
+lua51-lpeg
 luajit
 lz4
 lzo
