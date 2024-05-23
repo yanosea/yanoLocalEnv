@@ -499,6 +499,8 @@ p11-kit
 pacman
 pacman-contrib
 pacman-mirrorlist
+pacseek
+pacseek-debug
 pam
 pambase
 pango
