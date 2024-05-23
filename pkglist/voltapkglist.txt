@@ -3,3 +3,4 @@ aicommits
 pnpm
 qiita-cli
 typescript
+zenn-cli
