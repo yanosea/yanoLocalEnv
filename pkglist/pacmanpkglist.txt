@@ -158,6 +158,7 @@ gssdp
 gst-plugins-bad-libs
 gst-plugins-base-libs
 gstreamer
+gtest
 gtk-update-icon-cache
 gtk3
 guile
@@ -557,6 +558,7 @@ rubberband
 runc
 rust
 s2n-tls
+scons
 sdl2
 seatd
 sed
