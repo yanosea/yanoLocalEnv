@@ -640,8 +640,6 @@ wayvnc
 webp-pixbuf-loader
 weston
 wezterm
-wezterm-shell-integration
-wezterm-terminfo
 wget
 which
 wimlib
