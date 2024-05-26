@@ -1,5 +1,4 @@
 aur.archlinux.org/yay
-github.com/equalsraf/win32yank
 github.com/kyoheiu/era
 github.com/lars-berger/GlazeWM
 github.com/ryanoasis/nerd-fonts
