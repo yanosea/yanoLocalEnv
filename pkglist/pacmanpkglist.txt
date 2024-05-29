@@ -343,6 +343,7 @@ libopenmpt
 libp11-kit
 libpcap
 libpciaccess
+libpipeline
 libplacebo
 libpng
 libproxy
@@ -444,6 +445,7 @@ m4
 mailcap
 make
 mako
+man-db
 marp-cli
 md4c
 mesa
