@@ -13,6 +13,7 @@ alsa-topology-conf
 alsa-ucm-conf
 aml
 aom
+appmenu-gtk-module
 arch-install-scripts
 archlinux-keyring
 argon2
@@ -273,6 +274,7 @@ lcms2
 ldns
 less
 lf
+libappindicator-gtk3
 libarchive
 libass
 libassuan
@@ -290,6 +292,8 @@ libcpuid
 libcups
 libdaemon
 libdatrie
+libdbusmenu-glib
+libdbusmenu-gtk3
 libdeflate
 libdisplay-info
 libdovi
@@ -597,6 +601,8 @@ systemd
 systemd-libs
 systemd-sysvcompat
 tar
+tauri-cli
+tauri-cli-debug
 tcl
 texinfo
 tig
@@ -640,6 +646,8 @@ wails-debug
 wayland
 wayland-protocols
 wayvnc
+webkit2gtk
+webkit2gtk-4.1
 webp-pixbuf-loader
 weston
 wezterm
