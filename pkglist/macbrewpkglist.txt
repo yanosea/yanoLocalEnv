@@ -96,6 +96,7 @@ onyx
 parallels
 processing
 qmk-toolbox
+raycast
 sonic-pi
 splashtop-personal
 splice
