@@ -15,6 +15,7 @@ genact
 gh
 ghq
 git-credential-oauth
+git-delta
 git-lfs
 git-split-diffs
 github-release
