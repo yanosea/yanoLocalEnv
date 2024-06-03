@@ -56,6 +56,7 @@ wimlib
 wrk-trello
 xcodes
 yanosea/tap/mindnum
+yqrashawn/goku/goku
 z
 zellij
 zoxide
