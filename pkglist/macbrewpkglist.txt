@@ -71,7 +71,6 @@ bitwarden
 blackhole-16ch
 blender
 chrome-remote-desktop-host
-clipy
 contexts
 coteditor
 daisydisk
