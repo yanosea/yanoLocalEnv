@@ -56,6 +56,7 @@ ca-certificates-utils
 cabal-install
 cairo
 cantarell-fonts
+cargo-make
 cargo-update
 chrono-date
 clang
