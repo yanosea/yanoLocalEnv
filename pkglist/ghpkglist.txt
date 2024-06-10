@@ -4,8 +4,7 @@ github.com/lars-berger/GlazeWM
 github.com/ryanoasis/nerd-fonts
 github.com/tmux-plugins/tpm
 github.com/yanosea/homebrew-tap
-github.com/yanosea/jrpf
-github.com/yanosea/jrpw
+github.com/yanosea/jrp
 github.com/yanosea/mindnum
 github.com/yanosea/rep
 github.com/yanosea/spotlike
