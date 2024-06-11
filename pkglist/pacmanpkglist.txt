@@ -61,6 +61,7 @@ cargo-update
 chrono-date
 clang
 cmake
+cmatrix
 colord
 compiler-rt
 containerd
