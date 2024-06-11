@@ -101,6 +101,7 @@ fakeroot
 fd
 ffmpeg
 fftw
+figlet
 file
 filesystem
 findutils
