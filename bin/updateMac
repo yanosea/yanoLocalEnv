@@ -1,47 +1,54 @@
 #!/opt/homebrew/bin/zsh
-#
+
 # load function
 . "$WORKSPACE/bin/askYN.sh"
 
+# check command
+if command -v gum &>/dev/null; then
+	CONFIRM_CMD="gum confirm"
+else
+	CONFIRM_CMD="askYN"
+fi
+
 # ask update
-if askYN $'\e[32;1mDo you update Mac env?\e[m'; then
+if $CONFIRM_CMD "Do you update Arch env?"; then
 
-  # update mac env
-  echo -e $'\e[36;1mupdate mac env!\e[m'
+	# update mac env
+	echo -e $'\e[36;1mupdate mac env!\e[m'
 
-  # update homebrew packages
-  updateBrewPkg
+	# update homebrew packages
+	updateBrewPkg
 
-  # update go packages
-  updateGoPkg
+	# update go packages
+	updateGoPkg
 
-  # update github packages
-  updateGitHubPkg
+	# update github packages
+	updateGitHubPkg
 
-  # update gh extensions
-  updateGhExtension
+	# update gh extensions
+	updateGhExtension
 
-  # update volta and npm packages
-  updateVoltaPkg
+	# update volta and npm packages
+	updateVoltaPkg
 
-  # update pip packages
-  updatePipPkg
+	# update pip packages
+	updatePipPkg
 
-  # update fisher plugins
-  # updateFisherPlug
+	# update fisher plugins
+	# updateFisherPlug
 
-  # update zsh plugins
-  updateZshplug
+	# update zsh plugins
+	updateZshplug
 
-  # update pkglist
-  updatePkgList
+	# update pkglist
+	updatePkgList
 
-  # done!
-  echo -e $'\e[32;1mdone!\e[m'
+	# done!
+	echo -e $'\e[32;1mdone!\e[m'
 
 else
 
-  # update cancelled
-  echo -e $'\e[32;1mupdate cancelled\e[m'
+	# update cancelled
+	echo -e $'\e[31;1mupdate cancelled\e[m'
 
 fi
