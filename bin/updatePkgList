@@ -4,40 +4,40 @@ echo -e $'\e[33;1mupdate pkglist!\e[m'
 
 ## update pacman package list
 if [ "$OS" = "Linux" ]; then
-    yay -Qq > "$WORKSPACE"/pkglist/pacmanpkglist.txt
+	yay -Qq >"$WORKSPACE"/pkglist/pacmanpkglist.txt
 fi
 
 ## update brew package list
 if [ "$OS" = "Linux" ]; then
-    brew leaves > "$WORKSPACE"/pkglist/archbrewpkglist.txt
+	brew leaves >"$WORKSPACE"/pkglist/archbrewpkglist.txt
 elif [ "$OS" = "Darwin" ]; then
-    brew leaves > "$WORKSPACE"/pkglist/macbrewpkglist.txt
-    brew list --cask -1 >> "$WORKSPACE"/pkglist/macbrewpkglist.txt
+	brew leaves >"$WORKSPACE"/pkglist/macbrewpkglist.txt
+	brew list --cask -1 >>"$WORKSPACE"/pkglist/macbrewpkglist.txt
 fi
 
 ## update go package list
-rm "$WORKSPACE"/pkglist/gopkglist.txt
+rm -fr "$WORKSPACE"/pkglist/gopkglist.txt
 for file in "$GOPATH"/bin/*; do
-    if [[ -f "$file" ]]; then
-        pkg="$(go version -m "$file" | head -n2 | tail -n1 | awk '{print $2}')"
-        echo "${pkg}@latest" >> "$WORKSPACE"/pkglist/gopkglist.txt
-    fi
+	if [[ -f "$file" ]]; then
+		pkg="$(go version -m "$file" | head -n2 | tail -n1 | awk '{print $2}')"
+		echo "${pkg}@latest" >>"$WORKSPACE"/pkglist/gopkglist.txt
+	fi
 done
 
 ## update gitHub package List
-rm "$WORKSPACE"/pkglist/ghpkglist.txt
+rm -fr "$WORKSPACE"/pkglist/ghpkglist.txt
 for repo in $(ghq list); do
-    visibility=$(gh repo view "$repo" --json visibility --jq '.visibility' 2>/dev/null)
-    exit_status=$?
-    if [ "$exit_status" -eq 0 ] && [ "$visibility" == "PUBLIC" ]; then
-        echo "$repo" >> "$WORKSPACE"/pkglist/ghpkglist.txt
-    elif [ "$exit_status" -eq 1 ]; then
-        echo "$repo" >> "$WORKSPACE"/pkglist/ghpkglist.txt
-    fi
+	visibility=$(gh repo view "$repo" --json visibility --jq '.visibility' 2>/dev/null)
+	exit_status=$?
+	if [ "$exit_status" -eq 0 ] && [ "$visibility" == "PUBLIC" ]; then
+		echo "$repo" >>"$WORKSPACE"/pkglist/ghpkglist.txt
+	elif [ "$exit_status" -eq 1 ]; then
+		echo "$repo" >>"$WORKSPACE"/pkglist/ghpkglist.txt
+	fi
 done
 
 ## update gh extension list
-gh extension list | tr -s ' ' '\t' | awk '{print $3}' > "$WORKSPACE"/pkglist/ghextensionlist.txt
+gh extension list | tr -s ' ' '\t' | awk '{print $3}' >"$WORKSPACE"/pkglist/ghextensionlist.txt
 
 ## update volta package list
-volta list all | sed -n 's/^package \(@\{0,1\}[^@]*\).*/\1/p' > "$WORKSPACE"/pkglist/voltapkglist.txt
+volta list all | sed -n 's/^package \(@\{0,1\}[^@]*\).*/\1/p' >"$WORKSPACE"/pkglist/voltapkglist.txt
